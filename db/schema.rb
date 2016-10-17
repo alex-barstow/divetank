@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20161017220352) do
 
   create_table "dives", force: :cascade do |t|
     t.integer "user_id",                       null: false
-    t.string  "title"
+    t.string  "title",                         null: false
     t.integer "number"
     t.string  "site_name",                     null: false
     t.string  "date",                          null: false

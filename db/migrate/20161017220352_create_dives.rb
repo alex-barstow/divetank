@@ -2,7 +2,7 @@ class CreateDives < ActiveRecord::Migration[5.0]
   def change
     create_table :dives do |t|
       t.integer :user_id, null: false
-      t.string :title
+      t.string :title, null: false
       t.integer :number
       t.string :site_name, null: false
       t.string :date, null: false
