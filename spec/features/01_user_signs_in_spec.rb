@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-feature 'user signs in', %{
+feature 'user signs in', %(
   As an unauthenticated user
   I want to sign in
   So that I can log my dives
-} do
+) do
 
   scenario 'user specifies valid and required information' do
     user = FactoryGirl.create(:user)

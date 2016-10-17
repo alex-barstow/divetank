@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-feature 'user signs up', %{
+feature 'user signs up', %(
   As a prospective user
   I want to create an account
   So that I can start tracking my dives
-} do
+) do
 
   # Acceptance Criteria:
   # * I must be able to create an account by providing my email

@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-feature 'user signs out', %{
+feature 'user signs out', %(
   As an authenticated user
   I want to sign out
   So that no one else can post on my behalf
-} do
+) do
 
   # ACCEPTANCE CRITERIA:
   # * I must be able to log out of the site from any page
