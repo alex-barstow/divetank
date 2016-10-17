@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe User do
-  it { should have_valid(:first_name).when('Jon', 'Steve') }
+  it { should have_valid(:first_name).when('Cornelius', 'Steve') }
   it { should_not have_valid(:first_name).when(nil, '') }
 
   it { should have_valid(:last_name).when('Smith', 'George') }
