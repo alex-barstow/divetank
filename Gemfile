@@ -39,7 +39,7 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'valid_attribute'
-  gem 'shoulda-matchers', require: false
+  gem 'shoulda-matchers'
 end
 
 group :development do
