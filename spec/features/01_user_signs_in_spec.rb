@@ -1,17 +1,13 @@
 require 'rails_helper'
 
-feature 'user signs in', %Q{
+feature 'user signs in', %{
   As an unauthenticated user
   I want to sign in
   So that I can log my dives
 } do
 
-  # ACCEPTANCE CRITERIA:
-  # * I must be able to sign in to an account, using my provided email and password
-
   scenario 'user specifies valid and required information' do
     user = FactoryGirl.create(:user)
-
     visit root_path
     click_link 'Sign In'
     fill_in 'Email', with: user.email
@@ -24,7 +20,6 @@ feature 'user signs in', %Q{
 
   scenario 'user specifies invalid information' do
     user = FactoryGirl.create(:user)
-
     visit root_path
     click_link 'Sign In'
     fill_in 'Email', with: user.email
@@ -37,7 +32,6 @@ feature 'user signs in', %Q{
 
   scenario 'user specifies invalid information' do
     user = FactoryGirl.create(:user)
-
     visit root_path
     click_link 'Sign In'
     fill_in 'Email', with: user.email + 'abc'

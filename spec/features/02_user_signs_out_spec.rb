@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'user signs out', %Q{
+feature 'user signs out', %{
   As an authenticated user
   I want to sign out
   So that no one else can post on my behalf

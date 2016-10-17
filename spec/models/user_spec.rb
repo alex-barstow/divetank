@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe User do
-
   it { should have_valid(:first_name).when('Jon', 'Steve') }
   it { should_not have_valid(:first_name).when(nil, '') }
 
@@ -13,13 +12,4 @@ describe User do
 
   it { should have_valid(:user_name).when('example', 'username') }
   it { should_not have_valid(:user_name).when(nil, '') }
-  
-  # it 'has an admin? method to determine user role' do
-  #   user = FactoryGirl.create(:user)
-  #   expect(user.admin?).to eq(false)
-  #
-  #   user.role = 'admin'
-  #   user.save
-  #   expect(user.admin?).to eq(true)
-  # end
 end
