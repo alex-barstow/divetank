@@ -1,8 +1,20 @@
-<div>
-  <% if user_signed_in? %>
-    <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
-  <% else %>
-    <%= link_to 'Sign In', new_user_session_path %> |
-    <%= link_to 'Sign Up', new_user_registration_path %>
-  <% end %>
-</div>
+<section class="banner">
+  <div class="title">
+    <h1 class="title-text">DiveTank</h1>
+  </div>
+
+  <form class="row login" action="index.html" method="post">
+    <div class="row tagline">
+      <h1 class="tagline-text">Log and share your dives.</h1>
+    </div>
+
+    <div class="sign-up">
+      <% if user_signed_in? %>
+        <a href="/users/sign_out" class="button radius secondary home-button" data-method="delete">Sign Out</a>
+      <% else %>
+        <a href="/users/sign_up" class="button radius alert home-button">Sign Up</a>
+        <a href="/users/sign_in" class="button radius secondary home-button">Sign In</a>
+      <% end %>
+    </div>
+  </form>
+</section>
