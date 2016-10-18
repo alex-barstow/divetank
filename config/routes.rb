@@ -3,8 +3,9 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  resources :dives, only: [:show, :new, :create]
+
   resources :users do
     resources :dives, only: [:index]
   end
-  resources :dives, only: [:show]
 end
