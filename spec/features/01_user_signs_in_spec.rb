@@ -6,8 +6,9 @@ feature 'user signs in', %(
   So that I can log my dives
 ) do
 
+  let!(:user) { FactoryGirl.create(:user) }
+
   scenario 'user specifies valid and required information' do
-    user = FactoryGirl.create(:user)
     visit root_path
     click_link 'Sign In'
     fill_in 'Email', with: user.email
@@ -19,7 +20,6 @@ feature 'user signs in', %(
   end
 
   scenario 'user specifies invalid information' do
-    user = FactoryGirl.create(:user)
     visit root_path
     click_link 'Sign In'
     fill_in 'Email', with: user.email
@@ -31,7 +31,6 @@ feature 'user signs in', %(
   end
 
   scenario 'user specifies invalid information' do
-    user = FactoryGirl.create(:user)
     visit root_path
     click_link 'Sign In'
     fill_in 'Email', with: user.email + 'abc'

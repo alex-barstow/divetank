@@ -68,7 +68,7 @@
 .button {
   width: 150px;
 }
-.devise-form {
+.devise-form, .form {
   width: 40%;
   margin: auto;
 }

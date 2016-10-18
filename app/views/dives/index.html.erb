@@ -1,0 +1,32 @@
+<% if !user_signed_in? %>
+  <section class="banner">
+    <div class="title">
+      <h1 class="title-text">DiveTank</h1>
+    </div>
+
+    <form class="row login" action="index.html" method="post">
+      <div class="row tagline">
+        <h1 class="tagline-text">Log and share your dives.</h1>
+      </div>
+
+      <div class="sign-up">
+        <a href="/users/sign_up" class="button radius alert home-button">Sign Up</a>
+        <a href="/users/sign_in" class="button radius secondary home-button">Sign In</a>
+      </div>
+    </form>
+  </section>
+<% else %>
+  <div>
+    <h1><%= current_user.first_name %>'s Dive List</h1> <a href="/users/sign_out" class="button radius secondary home-button" data-method="delete">Sign Out</a>
+    <a href="/dives/new" class="button radius alert home-button">Add a Dive</a>
+  </div>
+  <div>
+    <ul>
+      <% @dives.each do |dive| %>
+        <li class="callout">
+          <%= dive.title %> <a href="/dives/<%= dive.id %>" class="button radius primary home-button">View Details</a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

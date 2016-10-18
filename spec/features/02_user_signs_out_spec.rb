@@ -6,11 +6,9 @@ feature 'user signs out', %(
   So that no one else can post on my behalf
 ) do
 
-  # ACCEPTANCE CRITERIA:
-  # * I must be able to log out of the site from any page
+  let!(:user) { FactoryGirl.create(:user) }
 
   scenario 'user specifies valid and required information' do
-    user = FactoryGirl.create(:user)
     visit root_path
     click_link 'Sign In'
     fill_in 'Email', with: user.email

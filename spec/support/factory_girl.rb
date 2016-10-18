@@ -9,4 +9,12 @@ FactoryGirl.define do
     password 'password'
     password_confirmation 'password'
   end
+
+  factory :dive do
+    title 'Chester Polling Drysuit Dive'
+    site_name 'The Wreck of the Chester Polling'
+    date 'September 12, 2016'
+
+    user
+  end
 end

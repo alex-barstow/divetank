@@ -6,10 +6,7 @@ feature 'user signs up', %(
   So that I can start tracking my dives
 ) do
 
-  # Acceptance Criteria:
-  # * I must be able to create an account by providing my email
-  # * I must be able to set and verify a password
-  # * I must be able to create a username connected to the account
+  let!(:user) { FactoryGirl.create(:user) }
 
   scenario 'user specifies valid and required information' do
     visit root_path

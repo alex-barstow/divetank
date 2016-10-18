@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  root 'users#index'
+  root 'dives#index'
 
   devise_for :users
-  resources :users
+
+  resources :dives, except: [:index]
+
+  resources :users do
+    resources :dives, only: [:index]
+  end
 end
