@@ -72,5 +72,4 @@ feature 'user creates a new dive', %(
     expect(page).to have_content('Title can\'t be blank')
     expect(page).to have_content('Site name can\'t be blank')
   end
-
 end

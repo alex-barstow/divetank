@@ -30,5 +30,4 @@ feature 'user deletes an existing dive', %(
     click_link 'Delete'
     expect(page).to_not have_content(dive.title)
   end
-
 end

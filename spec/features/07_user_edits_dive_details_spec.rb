@@ -9,7 +9,6 @@ feature 'user edits an existing dive', %(
   let!(:user) { FactoryGirl.create(:user) }
   let!(:dive) { FactoryGirl.create(:dive, user_id: user.id) }
 
-
   scenario 'a dive\'s show page has an edit button' do
     visit root_path
     click_link 'Sign In'
@@ -52,5 +51,4 @@ feature 'user edits an existing dive', %(
 
     expect(page).to have_content('Site name can\'t be blank')
   end
-
 end
