@@ -27,6 +27,29 @@ class DivesController < ApplicationController
     end
   end
 
+  def edit
+    @dive = Dive.find(params[:id])
+  end
+
+  def update
+    @dive = Dive.find(params[:id])
+    @dive.update_attributes(dive_params)
+
+    if @dive.save
+      flash[:notice] = 'Dive added successfully'
+      redirect_to @dive
+    else
+      flash[:alert] = @dive.errors.full_messages.join(', ')
+      render :new
+    end
+  end
+
+  def destroy
+    @dive = Dive.find(params[:id])
+    @dive.destroy
+    redirect_to user_dives_path(current_user)
+  end
+
   private
 
   def dive_params

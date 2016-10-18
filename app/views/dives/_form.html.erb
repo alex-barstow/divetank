@@ -1,0 +1,81 @@
+<%= form_for(@dive) do |f| %>
+
+  <div class="field">
+    <%= f.label :title, "Title*" %><br />
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :site_name, "Site*" %><br />
+    <%= f.text_area :site_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date, "Date*" %><br />
+    <%= f.text_field :date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :location, "Location" %><br />
+    <%= f.text_field :location %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description, "Description" %><br />
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rating, "Rating" %><br />
+    <%= f.text_field :rating %>
+  </div>
+
+  <div class="field">
+    <%= f.label :type, "Type" %><br />
+    <%= f.text_field :type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :buddy_name, "Buddy" %><br />
+    <%= f.text_field :buddy_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :max_depth, "Max. Depth" %><br />
+    <%= f.text_field :max_depth %>
+  </div>
+
+  <div class="field">
+    <%= f.label :average_depth, "Avg. Depth" %><br />
+    <%= f.text_field :average_depth %>
+  </div>
+
+  <div class="field">
+    <%= f.label :duration, "Dive Duration" %><br />
+    <%= f.text_field :duration %>
+  </div>
+
+  <div class="field">
+    <%= f.label :weather, "Weather Conditions" %><br />
+    <%= f.text_field :weather %>
+  </div>
+
+  <div class="field">
+    <%= f.label :water_temp, "Water Temperature" %><br />
+    <%= f.text_field :water_temp %>
+  </div>
+
+  <div class="field">
+    <%= f.label :air_temp, "Air Temperature" %><br />
+    <%= f.text_field :air_temp %>
+  </div>
+
+  <div class="field">
+    <%= f.label :banner_url, "Banner Photo" %><br />
+    <%= f.file_field :banner_url %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Add Dive", class: "button" %>
+  </div>
+<% end %>

@@ -7,7 +7,6 @@ feature 'user creates a new dive', %(
 ) do
 
   let!(:user) { FactoryGirl.create(:user) }
-  let!(:dive) { FactoryGirl.create(:dive, user_id: user.id) }
 
   scenario 'dive index page has button to add a new dive' do
     visit root_path
