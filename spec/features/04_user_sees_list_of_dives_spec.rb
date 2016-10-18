@@ -25,8 +25,8 @@ feature 'user sees dive list', %(
     fill_in 'Email', with: user.email
     fill_in 'user_password', with: user.password
     click_button 'Sign In'
-    click_button 'View Details'
-    
+    click_link 'View Details'
+
     expect(page).to have_content(user.dives.first.title)
     expect(page).to have_content(user.dives.first.site_name)
     expect(page).to have_content(user.dives.first.date)
