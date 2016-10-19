@@ -50,7 +50,7 @@ class DivesController < ApplicationController
   def destroy
     @dive = Dive.find(params[:id])
     @dive.destroy
-    redirect_to user_dives_path(current_user)
+    redirect_to dives_path
   end
 
   private

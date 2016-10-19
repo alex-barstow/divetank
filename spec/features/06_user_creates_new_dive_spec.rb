@@ -73,4 +73,10 @@ feature 'user creates a new dive', %(
     expect(page).to have_content('Title can\'t be blank')
     expect(page).to have_content('Site name can\'t be blank')
   end
+
+  scenario 'unauthenticated user is redirected from new dive form' do
+    visit new_dive_path
+    expect(page).to_not have_current_path(new_dive_path)
+    expect(page).to have_content('You need to sign in or sign up before continuing.')
+  end
 end

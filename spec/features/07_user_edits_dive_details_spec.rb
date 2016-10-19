@@ -53,4 +53,10 @@ feature 'user edits an existing dive', %(
 
     expect(page).to have_content('Site name can\'t be blank')
   end
+
+  scenario 'unauthenticated user is redirected from dive edit form' do
+    visit edit_dive_path(dive)
+    expect(page).to_not have_current_path(edit_dive_path(dive))
+    expect(page).to have_content('You need to sign in or sign up before continuing.')
+  end
 end

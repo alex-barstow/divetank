@@ -3,12 +3,7 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :dives, except: [:index] do
+  resources :dives do
     resources :images, only: [:create]
   end
-
-  resources :users do
-    resources :dives, only: [:index]
-  end
-
 end
