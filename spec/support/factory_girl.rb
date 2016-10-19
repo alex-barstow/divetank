@@ -18,4 +18,10 @@ FactoryGirl.define do
 
     user
   end
+
+  factory :image do
+    image { Rack::Test::UploadedFile.new(File.join(Rails.root, 'spec/support/image/GOPR5244.JPG')) }
+
+    dive
+  end
 end

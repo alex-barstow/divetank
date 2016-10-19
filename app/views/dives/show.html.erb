@@ -8,8 +8,10 @@
 
 <%= link_to 'Back', user_dives_path(current_user) %>
 
-<% @images.each do |image| %>
-  <img src="<%= image.image %>" class="dive-image" />
+<% if !@images.empty? && !@images.nil? %>
+  <% @images.each do |image| %>
+    <img src="<%= image.image %>" class="dive-image" />
+  <% end %>
 <% end %>
 
 <form action="/dives/<%= @dive.id %>/images" class="dropzone">

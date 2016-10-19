@@ -2,7 +2,6 @@ class ImagesController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:create]
 
   def create
-    binding.pry
     dive_id = request.check_path_parameters![:dive_id]
     @image = Image.new(dive_id: dive_id, image: params[:file])
 
