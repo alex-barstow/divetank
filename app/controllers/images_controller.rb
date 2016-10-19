@@ -7,7 +7,7 @@ class ImagesController < ApplicationController
 
     if @image.save
       respond_to do |format|
-        format.json{ render :json => @image }
+        format.json { render json: @image }
       end
     end
   end
