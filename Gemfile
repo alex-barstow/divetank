@@ -41,6 +41,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'capybara-webkit', '>= 1.10.1'
   gem 'launchy'
   gem 'valid_attribute'
   gem 'shoulda-matchers'

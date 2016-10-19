@@ -14,6 +14,7 @@ FactoryGirl.define do
     title 'Chester Polling Drysuit Dive'
     site_name 'The Wreck of the Chester Polling'
     date 'September 12, 2016'
+    sequence(:max_depth) { |n| "70#{n + 1}" }
 
     user
   end
