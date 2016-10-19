@@ -1,6 +1,8 @@
 <h1><%= @dive.title %></h1>
 <p><%= @dive.site_name %></p>
+<p><%= @dive.max_depth %> ft</p>
 <p><%= @dive.date %></p>
+
 <a href="/dives/<%= @dive.id %>/edit" class="button radius secondary home-button">Edit</a>
 <a href="/dives/<%= @dive.id %>" class="button radius alert home-button" data-method="delete">Delete</a>
 

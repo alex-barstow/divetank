@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161019153010) do
+ActiveRecord::Schema.define(version: 20161019182846) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20161019153010) do
     t.string  "type"
     t.boolean "favorited",     default: false, null: false
     t.string  "buddy_name"
-    t.integer "max_depth"
+    t.integer "max_depth",                     null: false
     t.integer "average_depth"
     t.string  "duration"
     t.text    "weather"

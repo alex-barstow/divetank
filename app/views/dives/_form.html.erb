@@ -1,3 +1,13 @@
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script>
+ $(function() {
+   $( "#datepicker" ).datepicker();
+ });
+</script>
+
 <%= form_for(@dive) do |f| %>
 
   <div class="field">
@@ -12,7 +22,7 @@
 
   <div class="field">
     <%= f.label :date, "Date*" %><br />
-    <%= f.text_field :date %>
+    <%= f.text_field :date, :type => "text", :id => "datepicker" %>
   </div>
 
   <div class="field">
@@ -41,7 +51,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :max_depth, "Max. Depth" %><br />
+    <%= f.label :max_depth, "Max. Depth*" %><br />
     <%= f.text_field :max_depth %>
   </div>
 
@@ -68,11 +78,6 @@
   <div class="field">
     <%= f.label :air_temp, "Air Temperature" %><br />
     <%= f.text_field :air_temp %>
-  </div>
-
-  <div class="field">
-    <%= f.label :image, "Images" %><br />
-    <%= f.file_field :image %>
   </div>
 
   <div class="actions">
