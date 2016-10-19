@@ -17,6 +17,9 @@ gem 'devise'
 gem 'dotenv'
 gem 'dotenv-rails'
 gem 'foundation-rails'
+gem 'carrierwave', '>= 1.0.0.beta', '< 2.0'
+gem 'fog-aws'
+gem 'dropzonejs-rails'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -38,6 +41,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'capybara-webkit', '>= 1.10.1'
   gem 'launchy'
   gem 'valid_attribute'
   gem 'shoulda-matchers'

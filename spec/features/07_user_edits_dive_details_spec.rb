@@ -20,7 +20,7 @@ feature 'user edits an existing dive', %(
     expect(page).to have_link('Edit')
   end
 
-  scenario 'a user edits a dive' do
+  scenario 'a user edits a dive', js: true do
     visit root_path
     click_link 'Sign In'
     fill_in 'Email', with: user.email
@@ -31,7 +31,9 @@ feature 'user edits an existing dive', %(
 
     fill_in 'Title', with: 'Gloucester Shore Dive'
     fill_in 'Site', with: 'Back Beach'
-    fill_in 'Date', with: '2016-10-14'
+    page.execute_script("$('#datepicker').val('10/17/2016')")
+    fill_in 'Max. Depth', with: 60
+
     click_button 'Add Dive'
 
     expect(page).to have_content('Gloucester Shore Dive')
@@ -50,5 +52,11 @@ feature 'user edits an existing dive', %(
     click_button 'Add Dive'
 
     expect(page).to have_content('Site name can\'t be blank')
+  end
+
+  scenario 'unauthenticated user is redirected from dive edit form' do
+    visit edit_dive_path(dive)
+    expect(page).to_not have_current_path(edit_dive_path(dive))
+    expect(page).to have_content('You need to sign in or sign up before continuing.')
   end
 end

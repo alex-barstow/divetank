@@ -1,7 +1,21 @@
 <h1><%= @dive.title %></h1>
 <p><%= @dive.site_name %></p>
+<p><%= @dive.max_depth %> ft</p>
 <p><%= @dive.date %></p>
+
 <a href="/dives/<%= @dive.id %>/edit" class="button radius secondary home-button">Edit</a>
 <a href="/dives/<%= @dive.id %>" class="button radius alert home-button" data-method="delete">Delete</a>
 
-<%= link_to 'Back', user_dives_path(current_user) %>
+<%= link_to 'Back', dives_path %>
+
+<% if !@images.empty? && !@images.nil? %>
+  <% @images.each do |image| %>
+    <img src="<%= image.image %>" class="dive-image" />
+  <% end %>
+<% end %>
+
+<form action="/dives/<%= @dive.id %>/images" class="dropzone">
+  <div class="fallback">
+    <input name="file" type="file" />
+  </div>
+</form>

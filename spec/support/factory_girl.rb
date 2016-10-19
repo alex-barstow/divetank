@@ -14,7 +14,14 @@ FactoryGirl.define do
     title 'Chester Polling Drysuit Dive'
     site_name 'The Wreck of the Chester Polling'
     date 'September 12, 2016'
+    sequence(:max_depth) { |n| "70#{n + 1}" }
 
     user
+  end
+
+  factory :image do
+    image { Rack::Test::UploadedFile.new(File.join(Rails.root, 'spec/support/image/GOPR5244.JPG')) }
+
+    dive
   end
 end
