@@ -1,4 +1,6 @@
 class Dive < ActiveRecord::Base
+  mount_uploader :banner, BannerUploader
+
   belongs_to :user
 
   validates :title, presence: true

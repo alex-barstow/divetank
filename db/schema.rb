@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161017220352) do
+ActiveRecord::Schema.define(version: 20161018202839) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20161017220352) do
     t.text    "weather"
     t.integer "water_temp"
     t.integer "air_temp"
-    t.string  "banner_url"
+    t.string  "banner"
   end
 
   create_table "users", force: :cascade do |t|

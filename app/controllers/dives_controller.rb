@@ -1,4 +1,6 @@
 class DivesController < ApplicationController
+  before_action :authenticate_user!, except: [:index]
+
   def index
     @dives = Dive.all
   end
@@ -55,6 +57,6 @@ class DivesController < ApplicationController
   def dive_params
     params.require(:dive).permit(:title, :site_name, :date, :location, :description,
                                  :rating, :type, :buddy_name, :max_depth, :average_depth,
-                                 :duration, :weather, :water_temp, :air_temp, :banner_url)
+                                 :duration, :weather, :water_temp, :air_temp, :banner)
   end
 end
