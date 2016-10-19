@@ -7,7 +7,7 @@ class DivesController < ApplicationController
 
   def show
     @dive = Dive.find(params[:id])
-    @image = Image.new
+    @images = @dive.images
   end
 
   def new
