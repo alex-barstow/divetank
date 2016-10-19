@@ -1,8 +1,13 @@
 <h1><%= @dive.title %></h1>
 <p><%= @dive.site_name %></p>
 <p><%= @dive.date %></p>
-<!-- <img src="<%= @dive.banner %>" class="banner-photo" /> -->
 <a href="/dives/<%= @dive.id %>/edit" class="button radius secondary home-button">Edit</a>
 <a href="/dives/<%= @dive.id %>" class="button radius alert home-button" data-method="delete">Delete</a>
 
 <%= link_to 'Back', user_dives_path(current_user) %>
+
+<form action="/dives/<%= @dive.id %>/images" class="dropzone">
+  <div class="fallback">
+    <input name="file" type="file" />
+  </div>
+</form>
