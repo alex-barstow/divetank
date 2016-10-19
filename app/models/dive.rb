@@ -5,4 +5,5 @@ class Dive < ActiveRecord::Base
   validates :title, presence: true
   validates :site_name, presence: true
   validates :date, presence: true
+  validates :max_depth, presence: true
 end
