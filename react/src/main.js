@@ -4,15 +4,10 @@ import ReactDOM from 'react-dom';
 import Index from './index/Index'
 
 $(function() {
-  ReactDOM.render(
-    <Index />,
-    document.getElementById('react-index')
-  );
-});
-
-$(function() {
-  ReactDOM.render(
-    <Show />,
-    document.getElementById('react-show')
-  );
+  if ($('#react-index').length) {
+    ReactDOM.render(
+      <Index />,
+      document.getElementById('react-index')
+    );
+  }
 });
