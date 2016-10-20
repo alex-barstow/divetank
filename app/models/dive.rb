@@ -6,4 +6,5 @@ class Dive < ActiveRecord::Base
   validates :site_name, presence: true
   validates :date, presence: true
   validates :max_depth, presence: true
+  validates :rating, numericality: { only_integer: true }, inclusion: { in: 1..5 }
 end
