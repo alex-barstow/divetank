@@ -45,6 +45,7 @@ group :development, :test do
   gem 'launchy'
   gem 'valid_attribute'
   gem 'shoulda-matchers'
+  gem 'seed_dump'
 end
 
 group :development do
