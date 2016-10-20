@@ -40,6 +40,7 @@ feature 'user creates a new dive', %(
     fill_in 'Site', with: 'Pebble Beach'
     page.execute_script("$('#datepicker').val('10/17/2016')")
     fill_in 'Max. Depth', with: 60
+    fill_in 'Rating', with: 4
 
     click_button 'Add Dive'
     expect(page).to have_content('Rockport Shore Dive')

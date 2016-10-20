@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  mount_uploader :profile_photo, ProfilePhotoUploader
+
   has_many :dives
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i

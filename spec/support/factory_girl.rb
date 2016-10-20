@@ -15,6 +15,7 @@ FactoryGirl.define do
     site_name 'The Wreck of the Chester Polling'
     date 'September 12, 2016'
     sequence(:max_depth) { |n| "70#{n + 1}" }
+    rating 4
 
     user
   end
