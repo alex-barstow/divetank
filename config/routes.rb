@@ -6,4 +6,10 @@ Rails.application.routes.draw do
   resources :dives do
     resources :images, only: [:create]
   end
+
+  namespace :api do
+    namespace :v1 do
+      resources :dives, only: [:index]
+    end
+  end
 end

@@ -9,7 +9,7 @@ feature 'user edits an existing dive', %(
   let!(:user) { FactoryGirl.create(:user) }
   let!(:dive) { FactoryGirl.create(:dive, user_id: user.id) }
 
-  scenario 'a dive\'s show page has an edit button' do
+  scenario 'a dive\'s show page has an edit button', js: true do
     visit root_path
     click_link 'Sign In'
     fill_in 'Email', with: user.email
@@ -39,7 +39,7 @@ feature 'user edits an existing dive', %(
     expect(page).to have_content('Gloucester Shore Dive')
   end
 
-  scenario 'a user edits a dive but enters invalid information' do
+  scenario 'a user edits a dive but enters invalid information', js: true do
     visit root_path
     click_link 'Sign In'
     fill_in 'Email', with: user.email

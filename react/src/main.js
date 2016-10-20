@@ -1,10 +1,18 @@
 import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Index from './index/Index'
 
 $(function() {
   ReactDOM.render(
-    <h1>Boo yaa</h1>,
-    document.getElementById('app')
+    <Index />,
+    document.getElementById('react-index')
+  );
+});
+
+$(function() {
+  ReactDOM.render(
+    <Show />,
+    document.getElementById('react-show')
   );
 });

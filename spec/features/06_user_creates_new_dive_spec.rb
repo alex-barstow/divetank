@@ -8,7 +8,7 @@ feature 'user creates a new dive', %(
 
   let!(:user) { FactoryGirl.create(:user) }
 
-  scenario 'dive index page has button to add a new dive' do
+  scenario 'dive index page has button to add a new dive', js: true do
     visit root_path
     click_link 'Sign In'
     fill_in 'Email', with: user.email
@@ -19,7 +19,7 @@ feature 'user creates a new dive', %(
   end
 
   # add more to this down the road
-  scenario 'dive index page has button to add a new dive' do
+  scenario 'dive index page has button to add a new dive', js: true do
     visit root_path
     click_link 'Sign In'
     fill_in 'Email', with: user.email
@@ -46,7 +46,7 @@ feature 'user creates a new dive', %(
     expect(page).to have_content('Rockport Shore Dive')
   end
 
-  scenario 'user enters invalid information' do
+  scenario 'user enters invalid information', js: true do
     visit root_path
     click_link 'Sign In'
     fill_in 'Email', with: user.email
@@ -61,7 +61,7 @@ feature 'user creates a new dive', %(
     expect(page).to have_content('Date can\'t be blank')
   end
 
-  scenario 'user enters invalid information' do
+  scenario 'user enters invalid information', js: true do
     visit root_path
     click_link 'Sign In'
     fill_in 'Email', with: user.email

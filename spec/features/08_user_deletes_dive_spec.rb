@@ -9,7 +9,7 @@ feature 'user deletes an existing dive', %(
   let!(:user) { FactoryGirl.create(:user) }
   let!(:dive) { FactoryGirl.create(:dive, user: user) }
 
-  scenario 'a dive\'s show page has a delete button' do
+  scenario 'a dive\'s show page has a delete button', js: true do
     visit root_path
     click_link 'Sign In'
     fill_in 'Email', with: user.email
@@ -20,7 +20,7 @@ feature 'user deletes an existing dive', %(
     expect(page).to have_link('Delete')
   end
 
-  scenario 'user can delete a dive from its show page' do
+  scenario 'user can delete a dive from its show page', js: true do
     visit root_path
     click_link 'Sign In'
     fill_in 'Email', with: user.email
