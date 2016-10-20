@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161020151857) do
+ActiveRecord::Schema.define(version: 20161020155436) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20161020151857) do
     t.string  "location"
     t.text    "description"
     t.integer "rating"
-    t.string  "type"
+    t.string  "dive_type"
     t.boolean "favorited",     default: false, null: false
     t.string  "buddy_name"
     t.integer "max_depth",                     null: false
