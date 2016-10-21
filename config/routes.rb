@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :dives do
     resources :images, only: [:create]
+    resources :videos, only: [:create]
   end
 
   namespace :api do

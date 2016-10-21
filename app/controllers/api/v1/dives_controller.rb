@@ -13,8 +13,9 @@ class Api::V1::DivesController < ApplicationController
   def show
     @dive = Dive.find(params[:id])
     @images = @dive.images
+    @videos = @dive.videos
 
-    json_response = {"dive": @dive, "images": @images}
+    json_response = {"dive": @dive, "images": @images, "videos": @videos}
 
     respond_to do |format|
       format.json { render json: json_response }

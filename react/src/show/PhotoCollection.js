@@ -14,9 +14,9 @@ const PhotoCollection = props => {
   })
 
   return (
-    <div>
+    <ul>
       {images}
-    </div>
+    </ul>
   )
 }
 
