@@ -15,7 +15,7 @@ class Index extends React.Component {
   getDives() {
     $.ajax({
       method: 'GET',
-      url: 'api/v1/dives.json',
+      url: '/api/v1/dives.json',
       contentType: 'application/json'
     })
     .done(data => {
