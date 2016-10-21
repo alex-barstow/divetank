@@ -16,17 +16,7 @@
     </form>
   </section>
 <% else %>
-  <div>
-    <h1><%= current_user.first_name %>'s Dive List</h1> <a href="/users/sign_out" class="button radius secondary home-button" data-method="delete">Sign Out</a>
-    <a href="/dives/new" class="button radius alert home-button">Add a Dive</a>
-  </div>
-  <div>
-    <ul>
-      <% @dives.each do |dive| %>
-        <li class="callout">
-          <%= dive.title %> <a href="/dives/<%= dive.id %>" class="button radius primary home-button">View Details</a>
-        </li>
-      <% end %>
-    </ul>
+  <div id="react-index">
+
   </div>
 <% end %>

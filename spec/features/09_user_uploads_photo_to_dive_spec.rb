@@ -20,7 +20,7 @@ feature 'user uploads photo to dive', %(
     expect(page).to have_content('Drop files here to upload')
   end
 
-  scenario 'user sees photo on show page after it is uploaded' do
+  scenario 'user sees photo on show page after it is uploaded', js: true do
     image = FactoryGirl.create(:image, dive: dive)
     visit root_path
     click_link 'Sign In'

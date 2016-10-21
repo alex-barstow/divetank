@@ -1,6 +1,9 @@
 ruby:
   config_file: .rubocop.yml
 
+jshint:
+  config_file: .jshintrc
+
 AllCops:
   Exclude:
     - db/schema.rb

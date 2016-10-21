@@ -8,7 +8,7 @@ feature 'user signs up', %(
 
   let!(:user) { FactoryGirl.create(:user) }
 
-  scenario 'user specifies valid and required information' do
+  scenario 'user specifies valid and required information', js: true do
     visit root_path
     click_link 'Sign Up'
     fill_in 'Email', with: 'user@example.com'

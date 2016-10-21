@@ -9,7 +9,7 @@ feature 'user sees dive list on index page', %(
   let!(:user) { FactoryGirl.create(:user) }
   let!(:dive) { FactoryGirl.create(:dive, user_id: user.id) }
 
-  scenario 'user logs in and sees their dives' do
+  scenario 'user logs in and sees their dives', js: true do
     visit root_path
     click_link 'Sign In'
     fill_in 'Email', with: user.email
@@ -19,7 +19,7 @@ feature 'user sees dive list on index page', %(
     expect(page).to have_content(user.dives.first.title)
   end
 
-  scenario 'each dive entry has a link to its show page' do
+  scenario 'each dive entry has a link to its show page', js: true do
     visit root_path
     click_link 'Sign In'
     fill_in 'Email', with: user.email

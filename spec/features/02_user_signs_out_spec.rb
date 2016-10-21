@@ -8,7 +8,7 @@ feature 'user signs out', %(
 
   let!(:user) { FactoryGirl.create(:user) }
 
-  scenario 'user specifies valid and required information' do
+  scenario 'user specifies valid and required information', js: true do
     visit root_path
     click_link 'Sign In'
     fill_in 'Email', with: user.email

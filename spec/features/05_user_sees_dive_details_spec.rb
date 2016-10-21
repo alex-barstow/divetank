@@ -9,7 +9,7 @@ feature 'user sees dive details on show page', %(
   let!(:user) { FactoryGirl.create(:user) }
   let!(:dive) { FactoryGirl.create(:dive, user_id: user.id) }
 
-  scenario 'each dive show page has that dive\'s details' do
+  scenario 'each dive show page has that dive\'s details', js: true do
     visit root_path
     click_link 'Sign In'
     fill_in 'Email', with: user.email
@@ -23,7 +23,7 @@ feature 'user sees dive details on show page', %(
     expect(page).to have_content(user.dives.first.date)
   end
 
-  scenario 'each dive show page has a button to go back to the index page' do
+  scenario 'each dive show page has a button to go back to the index page', js: true do
     visit root_path
     click_link 'Sign In'
     fill_in 'Email', with: user.email
