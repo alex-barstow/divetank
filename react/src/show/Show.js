@@ -9,6 +9,7 @@ class Show extends React.Component {
     this.state = {
       dive: [],
       images: [],
+      videos: [],
       current_user: ''
     };
   }
@@ -20,7 +21,7 @@ class Show extends React.Component {
       contentType: 'application/json'
     })
     .done(data => {
-      this.setState({ dive: data.dive, images: data.images, current_user: data.current_user });
+      this.setState({ dive: data.dive, images: data.images, videos: data.videos, current_user: data.current_user });
     });
   }
 
@@ -33,6 +34,7 @@ class Show extends React.Component {
       <div>
         <DiveData data={this.state.dive}/>
         <PhotoCollection data={this.state.images}/>
+        <VideoCollection data={this.state.videos}/>
       </div>
     )
   }

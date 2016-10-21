@@ -1,6 +1,7 @@
 class Dive < ActiveRecord::Base
   belongs_to :user
   has_many :images
+  has_many :videos
 
   validates :title, presence: true
   validates :site_name, presence: true

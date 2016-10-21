@@ -6,3 +6,10 @@
     <input name="file" type="file" />
   </div>
 </form>
+
+<form class="video-url" action="/dives/<%= @dive.id %>/videos" method="post">
+  <label for="video-url">Youtube Video URL</label>
+  <input type="text" name="video-url">
+
+  <input type="submit" value="Submit">
+</form>
