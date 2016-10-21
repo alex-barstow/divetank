@@ -2,7 +2,7 @@ import React from 'react';
 
 const Video = props => {
   let urlArray = props.url.split('=');
-  let embedFragment = urlArray[urlArray.length - 1]
+  let embedFragment = urlArray[urlArray.length - 1];
 
   return (
     <li>
