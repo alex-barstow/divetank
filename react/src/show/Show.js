@@ -20,7 +20,7 @@ class Show extends React.Component {
       contentType: 'application/json'
     })
     .done(data => {
-      this.setState({ dive: data.dive, images: data.images, current_user: data.current_user })
+      this.setState({ dive: data.dive, images: data.images, current_user: data.current_user });
     });
   }
 
