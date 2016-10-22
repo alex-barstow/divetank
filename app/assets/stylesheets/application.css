@@ -18,6 +18,9 @@
  body {
    background-color: #F0F0F0;
  }
+ h1 {
+   font-family: 'Ubuntu', sans-serif;
+ }
 .banner {
   background-image: url('/assets/background.jpg');
   background-size: cover;
