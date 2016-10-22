@@ -30,10 +30,8 @@ const DiveList = props => {
     );
   });
   return (
-    <div>
-      <ul>
-        {dives}
-      </ul>
+    <div className='row small-up-1 medium-up-2 large-up-4'>
+      {dives}
     </div>
   );
 };
