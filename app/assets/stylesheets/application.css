@@ -15,10 +15,17 @@
  *= require foundation_and_overrides
  *= require dropzone/dropzone
  */
+ body {
+   background-color: #F0F0F0;
+ }
+ h1 {
+   font-family: 'Ubuntu', sans-serif;
+ }
 .banner {
   background-image: url('/assets/background.jpg');
   background-size: cover;
   height: 100%;
+  width: 100%;
 }
 .home-button {
   margin: 10px;
@@ -28,20 +35,33 @@
 }
 .title {
   width: 100%;
-  height: 100px;
-  padding: 25px;
+  height: 90px;
+  padding: 20px;
   position: absolute;
 }
+.topbar {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: initial;
+  height: 90px;
+  padding: 20px;
+  background-color: #00688B;
+}
+
+.divetank {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
 .title-text {
-  display: inline-block;
+  display: table-cell;
+  vertical-align: middle;
   font-family: 'Bevan', cursive;
   text-align: left;
   font-size: 50px;
   color: white;
   transition: color 0.5s ease;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
 }
 .title-text:hover {
   color: #c3ebf9;
@@ -71,7 +91,10 @@
 }
 .devise-form, .form {
   width: 40%;
-  margin: auto;
+  margin: 10px auto;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 .dive-image {
   width: 250px;
@@ -83,6 +106,12 @@
   border: 2px dashed rgba(0, 0, 0, 0.3) !important;
   border-radius: 20px;
 }
-.dive {
-  list-style-type: none;
+.card {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.card:hover {
+  background-color: #f6f6f6;
+  transition: background-color 0.1s ease;
 }

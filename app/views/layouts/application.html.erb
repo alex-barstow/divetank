@@ -1,21 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Divetank</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-    <link href="https://fonts.googleapis.com/css?family=Bevan" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-
+  <%= render 'layouts/dochead' %>
   <body>
+    <%= render 'layouts/header' %>
     <% if notice || alert %>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+      <p class="alert-box primary notice"><%= notice %></p>
+      <p class="alert-box primary alert"><%= alert %></p>
     <% end %>
+
     <%= yield %>
   </body>
 </html>

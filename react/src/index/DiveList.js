@@ -2,8 +2,15 @@ import React from 'react';
 import Dive from './Dive'
 
 const DiveList = props => {
+  let images = props.images;
+  let banner;
+  let dives = props.dives.map(dive => {
+    images.map(image => {
+      if (image.dive_id === dive.id) {
+        banner = image.image.url;
+      }
+    });
 
-  let dives = props.data.map(dive => {
     return (
       <Dive
         key={dive.id}
@@ -26,14 +33,13 @@ const DiveList = props => {
         water_temp={dive.water_temp}
         air_temp={dive.air_temp}
         banner_id={dive.banner_id}
+        banner={banner}
       />
     );
   });
   return (
-    <div>
-      <ul>
-        {dives}
-      </ul>
+    <div className='row small-up-1 medium-up-2 large-up-3'>
+      {dives}
     </div>
   );
 };

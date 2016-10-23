@@ -3,9 +3,9 @@ import React from 'react';
 const Photo = props => {
 
   return (
-    <li>
+    <div className='column'>
       <img src={`${props.image.url}`} className="dive-image" />
-    </li>
+    </div>
   )
 }
 
