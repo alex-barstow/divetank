@@ -9,7 +9,7 @@ const DiveList = props => {
       if (image.dive_id === dive.id) {
         banner = image.image.url;
       }
-    })
+    });
 
     return (
       <Dive
