@@ -13,7 +13,7 @@ const VideoCollection = props => {
   })
 
   return (
-    <ul>
+    <ul className='row small-up-1 medium-up-3 large-up-4'>
       {videos}
     </ul>
   )
