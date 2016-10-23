@@ -2,31 +2,37 @@ import React from 'react';
 import Dive from './Dive'
 
 const DiveList = props => {
-
-  let dives = props.data.map(response => {
+  let images = props.images;
+  let banner;
+  let dives = props.dives.map(dive => {
+    images.map(image => {
+      if (image.dive_id === dive.id) {
+        banner = image.image.url;
+      }
+    })
 
     return (
       <Dive
-        key={response.dives.id}
-        id={response.dives.id}
-        user_id={response.dives.user_id}
-        title={response.dives.title}
-        number={response.dives.number}
-        site_name={response.dives.site_name}
-        date={response.dives.date}
-        location={response.dives.location}
-        description={response.dives.description}
-        rating={response.dives.rating}
-        dive_type={response.dives.dive_type}
-        favorited={response.dives.favorited}
-        buddy_name={response.dives.buddy_name}
-        max_depth={response.dives.max_depth}
-        average_depth={response.dives.average_depth}
-        duration={response.dives.duration}
-        weather={response.dives.weather}
-        water_temp={response.dives.water_temp}
-        air_temp={response.dives.air_temp}
-        banner_id={response.dives.banner_id}
+        key={dive.id}
+        id={dive.id}
+        user_id={dive.user_id}
+        title={dive.title}
+        number={dive.number}
+        site_name={dive.site_name}
+        date={dive.date}
+        location={dive.location}
+        description={dive.description}
+        rating={dive.rating}
+        dive_type={dive.dive_type}
+        favorited={dive.favorited}
+        buddy_name={dive.buddy_name}
+        max_depth={dive.max_depth}
+        average_depth={dive.average_depth}
+        duration={dive.duration}
+        weather={dive.weather}
+        water_temp={dive.water_temp}
+        air_temp={dive.air_temp}
+        banner_id={dive.banner_id}
         banner={banner}
       />
     );

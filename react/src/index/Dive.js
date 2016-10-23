@@ -6,6 +6,9 @@ const Dive = props => {
     <div className='column'>
       <div className='callout card'>
         <div>
+          <img src={props.banner} />
+        </div>
+        <div>
           <h2>{props.title}</h2>
         </div>
         <div>

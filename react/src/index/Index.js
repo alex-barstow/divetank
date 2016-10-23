@@ -20,7 +20,6 @@ class Index extends React.Component {
       contentType: 'application/json'
     })
     .done(data => {
-      debugger;
       this.setState({ dives: data.dives, images: data.images, current_user: data.current_user });
     });
   }
@@ -37,7 +36,7 @@ class Index extends React.Component {
           <UserProfile data={this.state.current_user}/>
         </div>
           <div>
-            <DiveList data={dives: this.state.dives, images: this.state.images} />
+            <DiveList dives={this.state.dives} images={this.state.images} />
           </div>
       </div>
     )
