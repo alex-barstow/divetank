@@ -3,7 +3,7 @@ import React from 'react';
 const DiveData = props => {
 
   return (
-    <div>
+    <div className='profile'>
       <h1>{props.data.title}</h1>
       <a href={`/dives/${props.data.id}/edit`} className="button radius secondary home-button">Edit</a>
       <a href={`/dives/${props.data.id}`} className="button radius alert home-button" data-method="delete">Delete</a>

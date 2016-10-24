@@ -1,0 +1,56 @@
+<%= form_for(@user) do |f| %>
+
+  <div class="field">
+    <%= f.label :user_name, "Username" %><br />
+    <%= f.text_field :user_name, required: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :first_name, "First Name" %><br />
+    <%= f.text_area :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name, "Last Name" %><br />
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email, "Email" %><br />
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :agency, "Certification Agency" %><br />
+    <%= f.text_field :agency %>
+  </div>
+
+  <div class="field">
+    <%= f.label :location, "Location" %><br />
+    <%= f.text_field :location %>
+  </div>
+
+  <div class="field">
+    <%= f.label :starting_dive_number, "Number of dives logged before DiveTank" %><br />
+    <%= f.text_field :starting_dive_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :certification_date, "Date first certified" %><br />
+    <%= f.text_field :certification_date, :type => "text", :id => "datepicker" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :certifications, "List your certifications" %><br />
+    <%= f.text_area :certifications %>
+  </div>
+
+  <div class="field">
+    <%= f.label :profile_photo, "Profile Photo" %><br />
+    <%= f.file_field :profile_photo %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Submit Changes", class: "button" %>
+  </div>
+<% end %>
