@@ -1,9 +1,10 @@
 import React from 'react';
+import ChartComponent from './ChartComponent'
 
 const ChartCollection = props => {
 
   return (
-    <li></li>
+    <ChartComponent />
   )
 }
 

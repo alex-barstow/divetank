@@ -1,6 +1,7 @@
 import React from 'react';
 import DiveList from './DiveList'
 import UserProfile from './UserProfile'
+import ChartCollection from './ChartCollection'
 
 class Index extends React.Component {
   constructor(props) {
@@ -36,6 +37,9 @@ class Index extends React.Component {
           <UserProfile data={this.state.current_user} diveTotal={this.state.current_user.starting_dive_number + this.state.dives.length}/>
         </div>
         <hr />
+        <div>
+          <ChartCollection />
+        </div>
         <div>
           <DiveList dives={this.state.dives} images={this.state.images} />
         </div>
