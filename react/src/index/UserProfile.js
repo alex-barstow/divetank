@@ -5,9 +5,20 @@ const UserProfile = props => {
   let name = props.data.first_name + ' ' + props.data.last_name;
   let userId = props.data.id;
   let agency = props.data.agency;
-  let certificationDate = props.data.certification_date;
   let certifications = props.data.certifications;
   let location = props.data.location;
+
+  let diveTotal;
+  if (props.diveTotal === 1) {
+    diveTotal = `${props.diveTotal} dive`
+  } else {
+    diveTotal = `${props.diveTotal} dives`
+  }
+
+  let certificationDate = '';
+  if (props.data.certification_date) {
+    certificationDate = `Certified since ${props.data.certification_date}`;
+  }
 
   return (
 
@@ -23,9 +34,10 @@ const UserProfile = props => {
           </div>
           <div className='column small-9'>
             <h1>{name}</h1>
+            <h3>{diveTotal}</h3>
             <p>{location}</p>
             <p>{agency}</p>
-            <p>Certified since {certificationDate}</p>
+            <p>{certificationDate}</p>
             <p>{certifications}</p>
             <a href={`/users/${userId}/edit`} className="button radius primary home-button float-right">Edit Profile</a>
           </div>

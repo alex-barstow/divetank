@@ -33,7 +33,7 @@ class Index extends React.Component {
     return (
       <div>
         <div className='row'>
-          <UserProfile data={this.state.current_user}/>
+          <UserProfile data={this.state.current_user} diveTotal={this.state.current_user.starting_dive_number + this.state.dives.length}/>
         </div>
         <hr />
         <div>
