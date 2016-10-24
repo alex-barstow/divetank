@@ -1,8 +1,12 @@
 class Api::V1::DivesController < ApplicationController
 
   def index
-    @dives = Dive.all
-    @images = Image.all
+    @dives = Dive.where(user: current_user)
+
+    @images = []
+    @dives.each do |dive|
+      @images << Image.where(dive: dive).first
+    end
 
     json_response = {"dives": @dives, "images": @images, "current_user": current_user}
 
