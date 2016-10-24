@@ -4,7 +4,7 @@ const Photo = props => {
 
   return (
     <div className='column'>
-      <img src={`${props.image.url}`} className="dive-image" />
+      <img src={`${props.image.url}`} />
     </div>
   )
 }

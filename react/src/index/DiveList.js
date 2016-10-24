@@ -3,13 +3,15 @@ import Dive from './Dive'
 
 const DiveList = props => {
   let images = props.images;
-  let banner;
+  let banner = 'http://thekeywestfishingreport.com/wp-content/uploads/2012/07/Dive_Flag.jpg';
   let dives = props.dives.map(dive => {
-    images.map(image => {
-      if (image.dive_id === dive.id) {
-        banner = image.image.url;
-      }
-    });
+    if (images.length > 0) {
+      images.map(image => {
+        if (image.dive_id === dive.id) {
+          banner = image.image.url;
+        }
+      });
+    }
 
     return (
       <Dive
@@ -32,7 +34,6 @@ const DiveList = props => {
         weather={dive.weather}
         water_temp={dive.water_temp}
         air_temp={dive.air_temp}
-        banner_id={dive.banner_id}
         banner={banner}
       />
     );

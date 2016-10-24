@@ -3,8 +3,10 @@
   <%= render 'layouts/dochead' %>
   <body>
     <%= render 'layouts/header' %>
-    <% if notice || alert %>
+    <% if notice %>
       <p class="alert-box primary notice"><%= notice %></p>
+    <% end %>
+    <% if alert %>
       <p class="alert-box primary alert"><%= alert %></p>
     <% end %>
 

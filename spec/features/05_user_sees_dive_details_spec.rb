@@ -21,6 +21,7 @@ feature 'user sees dive details on show page', %(
     expect(page).to have_content(user.dives.first.title)
     expect(page).to have_content(user.dives.first.site_name)
     expect(page).to have_content(user.dives.first.date)
+    expect(page).to have_content(user.dives.first.max_depth)
   end
 
   scenario 'each dive show page has a button to go back to the index page', js: true do

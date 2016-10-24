@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  resources :users, only: [:edit, :update]
+
   resources :dives do
     resources :images, only: [:create]
     resources :videos, only: [:create]

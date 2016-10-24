@@ -32,12 +32,13 @@ class Index extends React.Component {
 
     return (
       <div>
-        <div>
-          <UserProfile data={this.state.current_user}/>
+        <div className='row'>
+          <UserProfile data={this.state.current_user} diveTotal={this.state.current_user.starting_dive_number + this.state.dives.length}/>
         </div>
-          <div>
-            <DiveList dives={this.state.dives} images={this.state.images} />
-          </div>
+        <hr />
+        <div>
+          <DiveList dives={this.state.dives} images={this.state.images} />
+        </div>
       </div>
     )
   };

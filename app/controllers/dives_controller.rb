@@ -2,7 +2,7 @@ class DivesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @dives = Dive.all
+    @dives = Dive.where(user: current_user)
   end
 
   def show
@@ -21,6 +21,7 @@ class DivesController < ApplicationController
 
   def create
     @dive = Dive.new(dive_params)
+    @dive.number = current_user.starting_dive_number + Dive.where(user: current_user).length + 1
     @dive.user = current_user
     if @dive.save
       flash[:notice] = 'Dive added successfully'
