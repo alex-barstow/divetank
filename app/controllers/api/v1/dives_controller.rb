@@ -1,7 +1,7 @@
 class Api::V1::DivesController < ApplicationController
 
   def index
-    @dives = Dive.where(user: current_user).order(number: :asc)
+    @dives = Dive.where(user: current_user).order(number: :desc)
 
     @images = []
     @dives.each do |dive|
