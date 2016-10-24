@@ -9,6 +9,9 @@ const Dive = props => {
           <img src={props.banner} />
         </div>
         <div>
+          <p>#{props.number}</p>
+        </div>
+        <div>
           <h2>{props.title}</h2>
         </div>
         <div>

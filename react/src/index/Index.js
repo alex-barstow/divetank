@@ -20,7 +20,6 @@ class Index extends React.Component {
       contentType: 'application/json'
     })
     .done(data => {
-      debugger;
       this.setState({ dives: data.dives, images: data.images, current_user: data.current_user });
     });
   }

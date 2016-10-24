@@ -6,8 +6,13 @@ class UsersController < ApplicationController
   end
 
   def update
+    # also update all dive numbers
     @user = User.find(params[:id])
     @user.update_attributes(user_params)
+    @user.dives.each_with_index do |dive, index|
+      dive.update_attributes(number: @user.starting_dive_number + index + 1)
+    end
+
     if @user.valid?
       @user.save
       flash[:notice] = 'User Profile updated successfully.'

@@ -13,4 +13,5 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }
   validates :user_name, presence: true, uniqueness: true, length: { minimum: 4, maximum: 16 }
+  validates :starting_dive_number, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 end
