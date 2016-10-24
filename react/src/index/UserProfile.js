@@ -10,9 +10,9 @@ const UserProfile = props => {
 
   let diveTotal;
   if (props.diveTotal === 1) {
-    diveTotal = `${props.diveTotal} dive`
+    diveTotal = `${props.diveTotal} dive`;
   } else {
-    diveTotal = `${props.diveTotal} dives`
+    diveTotal = `${props.diveTotal} dives`;
   }
 
   let certificationDate = '';

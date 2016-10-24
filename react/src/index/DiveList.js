@@ -3,7 +3,7 @@ import Dive from './Dive'
 
 const DiveList = props => {
   let images = props.images;
-  let banner = 'http://thekeywestfishingreport.com/wp-content/uploads/2012/07/Dive_Flag.jpg'
+  let banner = 'http://thekeywestfishingreport.com/wp-content/uploads/2012/07/Dive_Flag.jpg';
   let dives = props.dives.map(dive => {
     if (images.length > 0) {
       images.map(image => {

@@ -78,5 +78,4 @@ feature 'user edits profile details', %(
 
     expect(page).to have_content('33 dives')
   end
-
 end
