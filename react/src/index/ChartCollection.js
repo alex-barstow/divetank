@@ -1,10 +1,10 @@
 import React from 'react';
-import Chart from './Chart'
+import ChartComponent from './ChartComponent'
 
 const ChartCollection = props => {
 
   return (
-    <Chart />
+    <ChartComponent />
   )
 }
 
