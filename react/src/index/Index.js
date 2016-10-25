@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react'
+import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router'
 import DiveList from './DiveList';
 import UserProfile from './UserProfile';
 import ChartComponent from './ChartComponent';

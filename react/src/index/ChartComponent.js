@@ -1,7 +1,6 @@
 import React from 'react';
 import {Chart} from 'react-google-charts';
 
-
 const ChartComponent = props => {
   let firstRange = props.data.first;
   let secondRange = props.data.second;
