@@ -1,7 +1,7 @@
 import React from 'react';
-import DiveList from './DiveList'
-import UserProfile from './UserProfile'
-import ChartComponent from './ChartComponent'
+import DiveList from './DiveList';
+import UserProfile from './UserProfile';
+import ChartComponent from './ChartComponent';
 
 class Index extends React.Component {
   constructor(props) {
@@ -24,13 +24,6 @@ class Index extends React.Component {
     .done(data => {
       this.setState({ dives: data.dives, chartRanges: data.chartRanges, images: data.images, current_user: data.current_user });
     });
-  }
-
-  onClickFavorite(diveId) {
-    $.ajax({
-      method: 'POST',
-      
-    })
   }
 
   componentDidMount() {
