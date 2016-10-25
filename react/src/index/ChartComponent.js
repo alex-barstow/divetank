@@ -9,7 +9,7 @@ const ChartComponent = props => {
   let fourthRange = props.data.fourth;
   let fifthRange = props.data.fifth;
   return (
-    <div className='column chart'>
+    <div className='chart'>
       <Chart
         chartType="ColumnChart"
         data={[
@@ -25,8 +25,8 @@ const ChartComponent = props => {
           vAxis: {title: 'Number of Dives'},
           legend: 'none'}}
         graph_id="ColumnChart"
-        width="100%"
-        height="400px"
+        width="50%"
+        height="450px"
        />
     </div>
   );
