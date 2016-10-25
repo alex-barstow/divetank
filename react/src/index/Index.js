@@ -16,10 +16,15 @@ class Index extends React.Component {
       selectedBlock: 'dives'
     };
     this.getDives = this.getDives.bind(this);
+    this.handleMenuClick = this.handleMenuClick.bind(this);
   }
 
-  handleMenuClick(event) {
-
+  handleMenuClick() {
+    if (this.state.selectedBlock === 'dives') {
+      this.setState({ selectedBlock: 'chart' })
+    } else {
+      this.setState({ selectedBlock: 'dives' })
+    }
   }
 
   getDives() {
@@ -38,6 +43,8 @@ class Index extends React.Component {
   }
 
   render() {
+    let onButtonClick = () => this.handleMenuClick();
+
     let displayBlock;
 
     if (this.state.selectedBlock === 'dives') {
@@ -49,7 +56,7 @@ class Index extends React.Component {
     return (
       <div className='info-group'>
         <UserProfile data={this.state.current_user} diveTotal={this.state.current_user.starting_dive_number + this.state.dives.length}/>
-        <ProfileMenu data={this.state.selectedBlock}/>
+        <ProfileMenu data={this.state.selectedBlock} onClick={onButtonClick}/>
         {displayBlock}
       </div>
     )
