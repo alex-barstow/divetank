@@ -4,6 +4,7 @@ import DiveList from './DiveList';
 import UserProfile from './UserProfile';
 import ProfileMenu from './ProfileMenu'
 import ChartComponent from './ChartComponent';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class Index extends React.Component {
   constructor(props) {
@@ -43,7 +44,10 @@ class Index extends React.Component {
   }
 
   render() {
-    let onButtonClick = () => this.handleMenuClick();
+    let onButtonClick = (event) => {
+      event.preventDefault();
+      this.handleMenuClick();
+    }
 
     let displayBlock;
 
