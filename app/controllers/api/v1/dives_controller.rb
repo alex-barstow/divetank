@@ -8,7 +8,20 @@ class Api::V1::DivesController < ApplicationController
       @images << Image.where(dive: dive).first if !Image.where(dive: dive).first.nil?
     end
 
-    json_response = {"dives": @dives, "images": @images, "current_user": current_user}
+    depths_array = []
+    @dives.each do |dive|
+      depths_array << dive.max_depth
+    end
+
+    zero_to_thirty = depths_array.select {|d| d < 31}.size
+    thirty_to_sixty = depths_array.select {|d| d.between?(31,60)}.size
+    sixty_to_ninety = depths_array.select {|d| d.between?(61,90)}.size
+    ninety_to_onethirty = depths_array.select {|d| d.between?(91,130)}.size
+    onethirty_and_above = depths_array.select {|d| d > 130}.size
+
+    chart_ranges = {first: zero_to_thirty, second: thirty_to_sixty, third: sixty_to_ninety, fourth: ninety_to_onethirty, fifth: onethirty_and_above}
+
+    json_response = {"dives": @dives, "chartRanges": chart_ranges, "images": @images, "current_user": current_user}
 
     respond_to do |format|
       format.json { render json: json_response }
