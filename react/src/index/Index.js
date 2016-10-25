@@ -1,12 +1,14 @@
 import React from 'react';
-import DiveList from './DiveList'
-import UserProfile from './UserProfile'
+import DiveList from './DiveList';
+import UserProfile from './UserProfile';
+import ChartComponent from './ChartComponent';
 
 class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       dives: [],
+      chartRanges: [],
       images: [],
       current_user: ""
     };
@@ -20,7 +22,7 @@ class Index extends React.Component {
       contentType: 'application/json'
     })
     .done(data => {
-      this.setState({ dives: data.dives, images: data.images, current_user: data.current_user });
+      this.setState({ dives: data.dives, chartRanges: data.chartRanges, images: data.images, current_user: data.current_user });
     });
   }
 
@@ -31,14 +33,10 @@ class Index extends React.Component {
   render() {
 
     return (
-      <div>
-        <div className='row'>
-          <UserProfile data={this.state.current_user} diveTotal={this.state.current_user.starting_dive_number + this.state.dives.length}/>
-        </div>
-        <hr />
-        <div>
-          <DiveList dives={this.state.dives} images={this.state.images} />
-        </div>
+      <div className='info-group'>
+        <UserProfile data={this.state.current_user} diveTotal={this.state.current_user.starting_dive_number + this.state.dives.length}/>
+        <ChartComponent data={this.state.chartRanges}/>
+        <DiveList dives={this.state.dives} images={this.state.images} />
       </div>
     )
   };

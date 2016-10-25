@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Index from './index/Index';
 import Show from './show/Show';
+import {Chart} from 'react-google-charts';
 
 $(function() {
   if ($('#react-index').length) {

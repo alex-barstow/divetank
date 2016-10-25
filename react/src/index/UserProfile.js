@@ -20,28 +20,24 @@ const UserProfile = props => {
     certificationDate = `Certified since ${props.data.certification_date}`;
   }
 
+  let profilePic = 'http://www.devlinkrepo.com/includes/person-placeholder.png';
+
   return (
 
-    <div>
-      <div>
+    <div className='row profile'>
+      <div className='column small-3 prof-pic column small-3'>
+        <img src={profilePic} />
+      </div>
+      <div className='column small-9 prof-data'>
+        <h1>{name}</h1>
+        <h3>{diveTotal}</h3>
+        <p>{location}</p>
+        <p>{agency}</p>
+        <p>{certificationDate}</p>
+        <p>{certifications}</p>
         <a href="/users/sign_out" className="button radius secondary home-button" data-method="delete">Sign Out</a>
         <a href="/dives/new" className="button radius alert home-button">Add a Dive</a>
-      </div>
-      <div className='profile'>
-        <div className='row'>
-          <div className='column small-3'>
-            <img src='http://www.msudenver.edu/media/sampleassets/profile-placeholder.png' />
-          </div>
-          <div className='column small-9'>
-            <h1>{name}</h1>
-            <h3>{diveTotal}</h3>
-            <p>{location}</p>
-            <p>{agency}</p>
-            <p>{certificationDate}</p>
-            <p>{certifications}</p>
-            <a href={`/users/${userId}/edit`} className="button radius primary home-button float-right">Edit Profile</a>
-          </div>
-        </div>
+        <a href={`/users/${userId}/edit`} className="button radius primary home-button float-right">Edit Profile</a>
       </div>
     </div>
   );

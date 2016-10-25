@@ -5,7 +5,7 @@ const Dive = props => {
   return (
     <div className='column'>
       <div className='callout card'>
-        <div>
+        <div className='header-pic'>
           <img src={props.banner} />
         </div>
         <div>
@@ -14,7 +14,7 @@ const Dive = props => {
         <div>
           <h2>{props.title}</h2>
         </div>
-        <div>
+        <div className='details-button'>
           <a href={`/dives/${props.id}`}  className="button radius primary home-button">View Details</a>
         </div>
       </div>
