@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router'
 import DiveList from './DiveList';
 import UserProfile from './UserProfile';
+import ProfileMenu from './ProfileMenu'
 import ChartComponent from './ChartComponent';
 
 class Index extends React.Component {
@@ -11,9 +12,14 @@ class Index extends React.Component {
       dives: [],
       chartRanges: [],
       images: [],
-      current_user: ""
+      current_user: '',
+      selectedBlock: 'dives'
     };
     this.getDives = this.getDives.bind(this);
+  }
+
+  handleMenuClick(event) {
+
   }
 
   getDives() {
@@ -32,12 +38,19 @@ class Index extends React.Component {
   }
 
   render() {
+    let displayBlock;
+
+    if (this.state.selectedBlock === 'dives') {
+      displayBlock = <DiveList dives={this.state.dives} images={this.state.images} />
+    } else {
+      displayBlock = <ChartComponent data={this.state.chartRanges}/>
+    }
 
     return (
       <div className='info-group'>
         <UserProfile data={this.state.current_user} diveTotal={this.state.current_user.starting_dive_number + this.state.dives.length}/>
-        <ChartComponent data={this.state.chartRanges}/>
-        <DiveList dives={this.state.dives} images={this.state.images} />
+        <ProfileMenu data={this.state.selectedBlock}/>
+        {displayBlock}
       </div>
     )
   };
