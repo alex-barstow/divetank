@@ -9,15 +9,16 @@ const ChartComponent = props => {
       <Chart
         chartType="ColumnChart"
         data={[
-        ["Element", "Density", { role: "style" } ],
-        ["Copper", 8.94, "#b87333"],
-        ["Silver", 10.49, "silver"],
-        ["Gold", 19.30, "gold"],
-        ["Platinum", 21.45, "color: #e5e4e2"]
+        ["Depth", "Number of Dives", { role: "style" } ],
+        ["0-30ft", 5, "#88ACF6"],
+        ["31-60ft", 2, "#6E90E5"],
+        ["61-90ft", 4, "#5475D4"],
+        ["90-130ft", 4, "#3A59C3"],
+        ["130ft+", 1, "#203EB2"]
       ]}
-        options={{title: '# of Dives at a given depth',
-          hAxis: {title: 'Depth', minValue: 0, maxValue: 15},
-          vAxis: {title: '# of Dives', minValue: 0, maxValue: 15},
+        options={{title: 'Experience at Depth',
+          hAxis: {title: 'Depth'},
+          vAxis: {title: '# of Dives'},
           legend: 'none'}}
         graph_id="ColumnChart"
         width="100%"
