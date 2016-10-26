@@ -9,6 +9,8 @@ const DiveData = props => {
           <div className='column small-6'>
             <h1>{props.data.title}</h1>
             <h4 className='subheader'>{props.data.site_name}, {props.data.location}</h4>
+            <h5>Rating: {props.data.rating}</h5>
+            <p>{props.data.date}</p>
           </div>
           <div className='column small-6 dive-number-show'>
             <h1 className='subheader'># {props.data.number}</h1>
@@ -16,11 +18,11 @@ const DiveData = props => {
         </div>
       </div>
       <div className='column small-6'>
-        <h3>Rating: {props.data.rating}</h3>
-        <p>{props.data.date}</p>
+        <h3 className='weather-conditions'>Description:</h3>
         <p>Buddy: {props.data.buddy_name}</p>
-        <p>Type: {props.data.type}</p>
-        <p>Max: {props.data.max_depth}ft Avg: {props.data.average_depth}</p>
+        <p>Type: {props.data.dive_type}</p>
+        <p>Max Depth: {props.data.max_depth}ft</p>
+        <p>Avg Depth: {props.data.average_depth}ft</p>
         <p>Duration: {props.data.duration}</p>
 
         <p>{props.data.description}</p>
