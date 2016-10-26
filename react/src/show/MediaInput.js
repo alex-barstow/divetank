@@ -5,7 +5,7 @@ const MediaInput = props => {
   return (
     <a href='#media-form'>
       <div className='add-media'>
-        <h2>Add Media</h2>
+        <h3 className='add-media-text'>Add Media</h3>
       </div>
     </a>
   )

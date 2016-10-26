@@ -162,6 +162,19 @@
 .diver-info {
   height: inherit;
 }
+.dive-number {
+  text-align: right;
+  padding-right: 50px;
+}
+.dive-number-show {
+  text-align: right;
+}
+.weather-conditions {
+  border-bottom: 1px solid;
+}
+.show-header {
+  margin-bottom: 20px;
+}
 hr {
   width: 90%;
   margin-bottom: 30px;
@@ -191,15 +204,23 @@ hr {
   background-color: white;
   padding: 15px;
 }
+.certs {
+  margin-top: 40px;
+  border-bottom: 2px solid;
+}
 .add-media {
   color: white;
   background-color: #6194bc;
   height: 60px;
   margin-bottom: 30px;
   text-align: center;
-  transition: none;
+  transition: all 0.3s ease;
 }
-.add-media-label {
+.add-media:hover {
+  background-color: #3D577A;
+}
+.add-media-text {
+  margin-bottom: 0px;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -209,7 +230,7 @@ hr {
 	padding-bottom: 56.25%;
 	padding-top: 25px;
 	height: 0;
-  margin: auto;
+  margin: 30px auto;
 }
 .video-wrapper iframe {
 	position: absolute;
@@ -217,6 +238,19 @@ hr {
 	left: 0;
 	width: 100%;
 	height: 100%;
+}
+.video-url {
+  width: 50%;
+  margin: auto;
+}
+.media-submit {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 50px;
+  transition: all 0.3s ease;
+}
+.media-submit:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
 .react-appear {
   opacity: 0.01;
