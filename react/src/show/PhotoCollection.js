@@ -2,7 +2,7 @@ import React from 'react';
 import Photo from './Photo';
 
 const PhotoCollection = props => {
-
+  debugger;
   let images = props.data.map(image => {
     return (
       <Photo

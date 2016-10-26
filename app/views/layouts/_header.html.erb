@@ -1,8 +1,16 @@
 <% if @path != '/' %>
-  <div class="row topbar">
-    <div class="column divetank">
+  <div class='topbar'>
+    <div class="column small-3 divetank">
       <a href="/">
         <h1 class="title-text">DiveTank</h1>
+      </a>
+    </div>
+    <div class='column small-6 top-text-container'>
+      <a href="/dives/new" class="hollow button">Add a Dive</a>
+    </div>
+    <div class='column small-3 top-text-container'>
+      <a href='/users/sign_out' data-method="delete">
+        <h4 class='top-button-right'>Sign Out</h4>
       </a>
     </div>
   </div>

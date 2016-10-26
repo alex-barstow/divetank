@@ -40,8 +40,6 @@ const UserProfile = props => {
         <p>{agency}</p>
         <p>{certificationDate}</p>
         <p>{certifications}</p>
-        <a href="/users/sign_out" className="button radius secondary home-button" data-method="delete">Sign Out</a>
-        <a href="/dives/new" className="button radius alert home-button">Add a Dive</a>
         <a href={`/users/${userId}/edit`} className="button radius primary home-button float-right">Edit Profile</a>
       </div>
     </div>
