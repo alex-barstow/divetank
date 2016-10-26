@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router'
+import React from 'react'
 import DiveList from './DiveList';
 import UserProfile from './UserProfile';
 import ProfileMenu from './ProfileMenu';
@@ -22,9 +21,9 @@ class Index extends React.Component {
 
   handleMenuClick() {
     if (this.state.selectedBlock === 'dives') {
-      this.setState({ selectedBlock: 'chart' })
+      this.setState({ selectedBlock: 'chart' });
     } else {
-      this.setState({ selectedBlock: 'dives' })
+      this.setState({ selectedBlock: 'dives' });
     }
   }
 
