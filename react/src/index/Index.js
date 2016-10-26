@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router'
 import DiveList from './DiveList';
 import UserProfile from './UserProfile';
-import ProfileMenu from './ProfileMenu'
+import ProfileMenu from './ProfileMenu';
 import ChartComponent from './ChartComponent';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
@@ -47,7 +47,7 @@ class Index extends React.Component {
     let onButtonClick = (event) => {
       event.preventDefault();
       this.handleMenuClick();
-    }
+    };
 
     let displayBlock;
 
