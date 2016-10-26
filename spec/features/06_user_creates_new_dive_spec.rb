@@ -15,7 +15,7 @@ feature 'user creates a new dive', %(
     fill_in 'user_password', with: user.password
     click_button 'Sign In'
 
-    expect(page).to have_link('Add a Dive')
+    expect(page).to have_link('Log a Dive')
   end
 
   # add more to this down the road
@@ -25,7 +25,7 @@ feature 'user creates a new dive', %(
     fill_in 'Email', with: user.email
     fill_in 'user_password', with: user.password
     click_button 'Sign In'
-    expect(page).to have_link('Add a Dive')
+    expect(page).to have_link('Log a Dive')
   end
 
   scenario 'user enters valid information', js: true do
@@ -34,7 +34,7 @@ feature 'user creates a new dive', %(
     fill_in 'Email', with: user.email
     fill_in 'user_password', with: user.password
     click_button 'Sign In'
-    click_link 'Add a Dive'
+    click_link 'Log a Dive'
 
     fill_in 'Title', with: 'Rockport Shore Dive'
     fill_in 'Site', with: 'Pebble Beach'
@@ -52,7 +52,7 @@ feature 'user creates a new dive', %(
     fill_in 'Email', with: user.email
     fill_in 'user_password', with: user.password
     click_button 'Sign In'
-    click_link 'Add a Dive'
+    click_link 'Log a Dive'
 
     fill_in 'Title', with: 'Rockport Shore Dive'
     fill_in 'Site', with: 'Pebble Beach'
@@ -67,7 +67,7 @@ feature 'user creates a new dive', %(
     fill_in 'Email', with: user.email
     fill_in 'user_password', with: user.password
     click_button 'Sign In'
-    click_link 'Add a Dive'
+    click_link 'Log a Dive'
 
     click_button 'Add Dive'
     expect(page).to have_content('Date can\'t be blank')
