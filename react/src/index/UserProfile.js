@@ -40,7 +40,7 @@ const UserProfile = props => {
         <p>{agency}</p>
         <p>{certificationDate}</p>
         <p>{certifications}</p>
-        <a href={`/users/${userId}/edit`} className="button radius primary home-button float-right">Edit Profile</a>
+        <a href={`/users/${userId}/edit`} className="button radius secondary home-button float-right">Edit Profile</a>
       </div>
     </div>
   );
