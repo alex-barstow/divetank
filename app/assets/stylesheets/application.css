@@ -192,10 +192,12 @@ hr {
   padding: 15px;
 }
 .add-media {
+  color: white;
   background-color: #6194bc;
   height: 60px;
   margin-bottom: 30px;
   text-align: center;
+  transition: none;
 }
 .add-media-label {
   position: relative;
