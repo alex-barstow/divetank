@@ -61,7 +61,12 @@ class Index extends React.Component {
       <div className='info-group'>
         <UserProfile data={this.state.current_user} diveTotal={this.state.current_user.starting_dive_number + this.state.dives.length}/>
         <ProfileMenu data={this.state.selectedBlock} onClick={onButtonClick}/>
-        {displayBlock}
+        <ReactCSSTransitionGroup
+          transitionName="react"
+          transitionAppear={true}
+          transitionAppearTimeout={500}>
+          {displayBlock}
+        </ReactCSSTransitionGroup>
       </div>
     )
   };

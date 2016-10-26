@@ -158,6 +158,15 @@ hr {
   left: 25%;
 }*/
 
+.react-appear {
+  opacity: 0.01;
+}
+
+.react-appear.react-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+
 .alert-box {
   margin: 0px 0px 0px 0px;
   padding: 1.3rem;
