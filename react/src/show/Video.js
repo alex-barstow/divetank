@@ -5,8 +5,8 @@ const Video = props => {
   let embedFragment = urlArray[urlArray.length - 1];
 
   return (
-    <div className='column'>
-      <iframe src={`https://www.youtube.com/embed/${embedFragment}`}></iframe>
+    <div className='video-wrapper'>
+      <iframe width="320" height="180" src={`https://www.youtube.com/embed/${embedFragment}`} frameBorder="0" allowFullScreen></iframe>
     </div>
   )
 }

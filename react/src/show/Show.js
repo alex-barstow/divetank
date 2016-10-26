@@ -2,6 +2,7 @@ import React from 'react';
 import DiveData from './DiveData';
 import PhotoCollection from './PhotoCollection';
 import VideoCollection from './VideoCollection';
+import MediaInput from './MediaInput';
 
 class Show extends React.Component {
   constructor(props) {
@@ -31,8 +32,9 @@ class Show extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='info-group'>
         <DiveData data={this.state.dive}/>
+        <MediaInput />
         <PhotoCollection data={this.state.images}/>
         <VideoCollection data={this.state.videos}/>
       </div>
