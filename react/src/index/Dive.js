@@ -3,8 +3,8 @@ import React from 'react';
 const Dive = props => {
 
   return (
-    <div className='column'>
-      <div className='callout card'>
+    <div className='column' data-equalizer-watch>
+      <div className='callout card' data-equalizer-watch>
         <div className='header-pic'>
           <img src={props.banner} />
         </div>

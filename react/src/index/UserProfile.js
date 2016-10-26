@@ -17,7 +17,7 @@ const UserProfile = props => {
     }
 
     if (props.data.certification_date) {
-      certificationDate = `Certified since ${props.data.certification_date}`;
+      certificationDate = `certified since ${props.data.certification_date}`;
     }
 
     if (props.data.profile_photo.url !== null) {
@@ -37,8 +37,7 @@ const UserProfile = props => {
         <h1>{name}</h1>
         <h3>{diveTotal}</h3>
         <p>{location}</p>
-        <p>{agency}</p>
-        <p>{certificationDate}</p>
+        <p>{agency} {certificationDate}</p>
         <p>{certifications}</p>
         <a href={`/users/${userId}/edit`} className="button radius secondary home-button float-right">Edit Profile</a>
       </div>

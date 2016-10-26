@@ -179,16 +179,13 @@ hr {
 .info-group {
   padding: 0px 90px;
 }
-/*.details-button {
-  position: absolute;
-  bottom: 0;
-  left: 25%;
-}*/
-
 .menu {
   height: 50px;
 }
-
+.nav-button {
+  width: 130px;
+  text-align: center;
+}
 .react-appear {
   opacity: 0.01;
 }

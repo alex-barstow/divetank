@@ -11,10 +11,12 @@ const ProfileMenu = props => {
     }
   }
   return (
-    <ul className='menu align-right' onClick={props.onClick}>
-      <li className={classNameDives}><a href='#'>Dives</a></li>
-      <li className={classNameChart}><a href='#'>Chart</a></li>
-    </ul>
+    <div className='menu-centered'>
+      <ul className='menu' onClick={props.onClick}>
+        <li className={classNameDives}><a href='#' className='nav-button'>Dives</a></li>
+        <li className={classNameChart}><a href='#' className='nav-button'>Chart</a></li>
+      </ul>
+    </div>
   )
 }
 

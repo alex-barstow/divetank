@@ -64,7 +64,9 @@ class Index extends React.Component {
         <ReactCSSTransitionGroup
           transitionName="react"
           transitionAppear={true}
-          transitionAppearTimeout={500}>
+          transitionAppearTimeout={500}
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={500}>
           {displayBlock}
         </ReactCSSTransitionGroup>
       </div>
