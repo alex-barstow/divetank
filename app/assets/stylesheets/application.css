@@ -208,6 +208,10 @@ hr {
   margin-top: 40px;
   border-bottom: 2px solid;
 }
+.photo-list {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
 .add-media {
   color: white;
   background-color: #6194bc;
