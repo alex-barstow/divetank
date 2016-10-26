@@ -1,9 +1,29 @@
 <% if @path != '/' %>
-  <div class="row topbar">
-    <div class="column divetank">
-      <a href="/">
-        <h1 class="title-text">DiveTank</h1>
-      </a>
+  <% if !current_user %>
+    <div class='topbar'>
+      <div class="column small-3 divetank">
+        <a href="/">
+          <h1 class="title-text">DiveTank</h1>
+        </a>
+      </div>
     </div>
-  </div>
+  <% else %>
+    <div data-sticky-container>
+      <div class='row topbar' data-sticky data-options="marginTop:0;" style="width:100%">
+        <div class="column small-3 divetank">
+          <a href="/">
+            <h1 class="title-text">DiveTank</h1>
+          </a>
+        </div>
+        <div class='column small-6 top-text-container'>
+          <a href="/dives/new" class="hollow button">Log a Dive</a>
+        </div>
+        <div class='column small-3 top-text-container'>
+          <a href='/users/sign_out' data-method="delete">
+            <h4 class='top-button-right'>Sign Out</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+  <% end %>
 <% end %>

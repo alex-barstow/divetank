@@ -39,7 +39,7 @@ const DiveList = props => {
     );
   });
   return (
-    <div className='small-up-1 medium-up-2 large-up-3' data-equalizer>
+    <div className='row small-up-1 medium-up-2 large-up-3' data-equalizer data-equalize-by-row="true">
       {dives}
     </div>
   );

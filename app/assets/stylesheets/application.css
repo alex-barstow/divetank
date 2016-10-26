@@ -36,7 +36,7 @@
 .title {
   width: 100%;
   height: 90px;
-  padding: 20px;
+  margin: 10px 0px 0px 35px;
   position: absolute;
 }
 .topbar {
@@ -46,7 +46,8 @@
   max-width: initial;
   height: 90px;
   padding: 20px;
-  background-color: #00688B;
+  background-color: #3D577A;
+  z-index: 2;
 }
 
 .divetank {
@@ -55,8 +56,7 @@
   transform: translateY(-50%);
 }
 .title-text {
-  display: table-cell;
-  vertical-align: middle;
+  margin-bottom: 0px;
   font-family: 'Bevan', cursive;
   text-align: left;
   font-size: 50px;
@@ -65,6 +65,32 @@
 }
 .title-text:hover {
   color: #c3ebf9;
+}
+.top-text-container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.top-button-right {
+  font-weight: 200;
+  text-align: right;
+  color: white;
+  margin-bottom: 0px;
+  transition: color 0.5s ease;
+}
+.top-button-right:hover {
+  color: #c3ebf9;
+}
+.button.hollow {
+  font-size: 18px;
+  color: white;
+  border-color: white;
+  margin-bottom: 0px;
+}
+.button.hollow:hover {
+  background-color: white;
+  border-color: white;
+  margin-bottom: 0px;
 }
 .tagline {
   display: block;
@@ -106,24 +132,29 @@
   border-radius: 5px;
   text-align: center;
   padding: 0px;
-  transition: box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 .card:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
 .profile {
   max-width: 100%;
+  max-height: 100%;
   background-color: white;
   margin: 50px auto;
-  transition: box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 .profile:hover {
   box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
 .prof-pic {
-  max-height: inherit;
   margin: 0px 0px 0px 0px;
   border-radius: 0px;
+  padding: 0px 0px 0px 0px ;
+}
+.prof-data {
+  height: inherit;
+  padding: 20px 0 0 40px;
 }
 .header-pic {
   width: inherit;
@@ -140,7 +171,7 @@ hr {
   margin: auto;
   margin-bottom: 25px;
   background-color: white;
-  transition: box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 .chart:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
@@ -148,11 +179,21 @@ hr {
 .info-group {
   padding: 0px 90px;
 }
-/*.details-button {
-  position: absolute;
-  bottom: 0;
-  left: 25%;
-}*/
+.menu {
+  height: 50px;
+}
+.nav-button {
+  width: 130px;
+  text-align: center;
+}
+.react-appear {
+  opacity: 0.01;
+}
+
+.react-appear.react-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
 
 .alert-box {
   margin: 0px 0px 0px 0px;
