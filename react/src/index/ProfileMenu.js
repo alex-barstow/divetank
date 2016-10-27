@@ -14,7 +14,7 @@ const ProfileMenu = props => {
     <div className='menu-centered'>
       <ul className='menu' onClick={props.onClick}>
         <li className={classNameDives}><a href='#' className='nav-button'>Dives</a></li>
-        <li className={classNameChart}><a href='#' className='nav-button'>Chart</a></li>
+        <li className={classNameChart}><a href='#' className='nav-button'>Charts</a></li>
       </ul>
     </div>
   )

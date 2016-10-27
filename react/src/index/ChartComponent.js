@@ -9,7 +9,6 @@ const ChartComponent = props => {
   let fifthRange = props.columnChart.fifth;
 
   let lineChartData = props.dives.map(dive => {
-
     let month = dive.date.split("/")[0]
     let day = dive.date.split("/")[1]
     let year = dive.date.split("/")[2]
@@ -58,7 +57,7 @@ const ChartComponent = props => {
               'label' : 'Depth'
             }
           ]}
-          options={{title: 'Experience at Depth',
+          options={{title: 'Dives vs. Time',
             hAxis: {title: 'Date'},
             vAxis: {title: 'Depth'},
             legend: 'none'}}
