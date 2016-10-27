@@ -1,15 +1,19 @@
 <div id="react-show">
 </div>
-
-<form action="/dives/<%= @dive.id %>/images" class="dropzone">
-  <div class="fallback">
-    <input name="file" type="file" />
+<div class="row media-submit" id="media-form">
+  <div class="column">
+    <form action="/dives/<%= @dive.id %>/images" class="dropzone">
+      <div class="fallback">
+        <input name="file" type="file" />
+      </div>
+    </form>
   </div>
-</form>
+  <div class="column">
+    <form class="video-url" action="/dives/<%= @dive.id %>/videos" method="post">
+      <label for="video-url">Youtube Video URL</label>
+      <input type="text" name="video-url">
 
-<form class="video-url" action="/dives/<%= @dive.id %>/videos" method="post">
-  <label for="video-url">Youtube Video URL</label>
-  <input type="text" name="video-url">
-
-  <input type="submit" value="Submit">
-</form>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</div>

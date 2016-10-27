@@ -14,7 +14,7 @@ const PhotoCollection = props => {
   })
 
   return (
-    <ul className='row small-up-1 medium-up-3 large-up-4'>
+    <ul className='row small-up-1 medium-up-3 large-up-4 photo-list'>
       {images}
     </ul>
   )

@@ -34,11 +34,18 @@ const UserProfile = props => {
         <img src={profilePic} />
       </div>
       <div className='column small-9 prof-data'>
-        <h1>{name}</h1>
-        <h3>{diveTotal}</h3>
-        <p>{location}</p>
-        <p>{agency} {certificationDate}</p>
-        <p>{certifications}</p>
+        <div className='row'>
+          <div className='column small-6'>
+            <h1>{name}</h1>
+            <h4 className='subheader'>{location}</h4>
+            <h5>{agency} {certificationDate}</h5>
+            <h5 className='certs'>Certifications:</h5>
+            <h5>{certifications}</h5>
+          </div>
+          <div className='dive-number column small-6'>
+            <h2>{diveTotal}</h2>
+          </div>
+        </div>
         <a href={`/users/${userId}/edit`} className="button radius secondary home-button float-right">Edit Profile</a>
       </div>
     </div>

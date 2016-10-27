@@ -60,6 +60,6 @@ class DivesController < ApplicationController
   def dive_params
     params.require(:dive).permit(:title, :site_name, :date, :location, :description,
                                  :rating, :dive_type, :buddy_name, :max_depth, :average_depth,
-                                 :duration, :weather, :water_temp, :air_temp, :banner)
+                                 :duration, :weather, :water_temp, :air_temp)
   end
 end
