@@ -32,7 +32,6 @@ feature 'user sees dive details on show page', %(
     click_button 'Sign In'
 
     click_link 'View Details'
-    click_link 'Back'
     expect(page).to have_content(user.dives.first.title)
   end
 end

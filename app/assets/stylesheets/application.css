@@ -129,6 +129,7 @@
   border-radius: 20px;
 }
 .card {
+  height: 100%;;
   border-radius: 5px;
   text-align: center;
   padding: 0px;
