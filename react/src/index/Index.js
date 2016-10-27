@@ -34,7 +34,11 @@ class Index extends React.Component {
       contentType: 'application/json'
     })
     .done(data => {
-      this.setState({ dives: data.dives, chartRanges: data.chartRanges, images: data.images, current_user: data.current_user });
+      this.setState({ dives: data.dives,
+                      chartRanges: data.chartRanges,
+                      images: data.images,
+                      current_user: data.current_user
+                    });
     });
   }
 
@@ -53,7 +57,7 @@ class Index extends React.Component {
     if (this.state.selectedBlock === 'dives') {
       displayBlock = <DiveList dives={this.state.dives} images={this.state.images} />
     } else {
-      displayBlock = <ChartComponent data={this.state.chartRanges}/>
+      displayBlock = <ChartComponent columnChart={this.state.chartRanges} dives={this.state.dives}/>
     }
 
     return (
