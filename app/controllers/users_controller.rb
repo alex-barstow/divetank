@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     @user.update_attributes(user_params)
-    
+
     @user.dives.each_with_index do |dive, index|
       dive.update_attributes(number: @user.starting_dive_number + index + 1)
     end
