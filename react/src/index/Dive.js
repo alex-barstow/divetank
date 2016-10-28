@@ -9,7 +9,7 @@ const Dive = props => {
           <img src={props.banner} />
         </div>
         <div>
-          <p>#{props.number}</p>
+          <h4 className='subheader'>#{props.number}</h4>
         </div>
         <div>
           <h2>{props.title}</h2>
