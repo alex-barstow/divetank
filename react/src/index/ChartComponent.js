@@ -24,8 +24,8 @@ const ChartComponent = props => {
   });
 
   return (
-    <div>
-      <div className='chart'>
+    <div className='charts'>
+      <div className='column large-6'>
         <Chart
           chartType="ColumnChart"
           data={[
@@ -41,11 +41,11 @@ const ChartComponent = props => {
             vAxis: {title: 'Number of Dives'},
             legend: 'none'}}
           graph_id="ColumnChart"
-          width="50%"
+          width="100%"
           height="450px"
          />
       </div>
-      <div className='chart'>
+      <div className='column large-6'>
         <Chart
           chartType="ScatterChart"
           rows={lineChartData}
@@ -64,7 +64,7 @@ const ChartComponent = props => {
             vAxis: {title: 'Depth'},
             legend: 'none'}}
           graph_id="ScatterChart"
-          width="50%"
+          width="100%"
           height="450px"
          />
       </div>
