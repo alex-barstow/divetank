@@ -51,12 +51,10 @@ const ChartComponent = props => {
           rows={lineChartData}
           columns={[
             {
-              'type': 'date',
-              'label' : 'Date'
+              'type': 'date'
             },
             {
-              'type' : 'number',
-              'label' : ''
+              'type' : 'number'
             }
           ]}
           options={{title: 'Dive Frequency and Depth',
