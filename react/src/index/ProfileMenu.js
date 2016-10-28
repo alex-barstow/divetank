@@ -5,7 +5,7 @@ const ProfileMenu = props => {
 
   if (props.data) {
     if (props.data === 'chart') {
-      classNameChart = 'active';
+      classNameChart = 'nav-tab active';
     } else if (props.data === 'dives') {
       classNameDives = 'active';
     }
@@ -13,8 +13,8 @@ const ProfileMenu = props => {
   return (
     <div className='menu-centered'>
       <ul className='menu' onClick={props.onClick}>
-        <li className={classNameDives}><a href='#' className='nav-button'>Dives</a></li>
-        <li className={classNameChart}><a href='#' className='nav-button'>Charts</a></li>
+        <li className={classNameDives}><a href='#' className='nav-button'><i className="fa fa-th fa-2x" aria-hidden="true"></i></a></li>
+        <li className={classNameChart}><a href='#' className='nav-button'><i className="fa fa-bar-chart fa-2x" aria-hidden="true"></i></a></li>
       </ul>
     </div>
   )

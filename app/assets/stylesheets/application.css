@@ -19,7 +19,14 @@
    background-color: #F0F0F0;
  }
  h1 {
-   font-family: 'Ubuntu', sans-serif;
+   font-family: 'Open Sans', sans-serif;
+ }
+ a {
+   color: #AAAAAA;
+   transition: color 0.1s ease;
+ }
+ a:hover {
+   color: #6194BC;
  }
 .banner {
   background-image: url('/assets/background.jpg');
@@ -61,7 +68,7 @@
   text-align: left;
   font-size: 50px;
   color: white;
-  transition: color 0.5s ease;
+  transition: color 0.3s ease;
 }
 .title-text:hover {
   color: #c3ebf9;
@@ -76,7 +83,7 @@
   text-align: right;
   color: white;
   margin-bottom: 0px;
-  transition: color 0.5s ease;
+  transition: color 0.3s ease;
 }
 .top-button-right:hover {
   color: #c3ebf9;
@@ -122,6 +129,9 @@
   padding: 10px 20px;
   border-radius: 10px;
 }
+.sign-in {
+  margin-top: 60px;
+}
 .dropzone {
   width: 40%;
   margin: 15px auto;
@@ -156,6 +166,12 @@
 .prof-data {
   height: inherit;
   padding: 20px 0 0 40px;
+}
+.edit-button {
+  margin: 0px 20px 20px 0px;
+}
+.nav-tab {
+  border-radius: 10px;
 }
 .header-pic {
   width: inherit;
