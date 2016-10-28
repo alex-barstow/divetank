@@ -14,12 +14,20 @@
  *= require_self
  *= require foundation_and_overrides
  *= require dropzone/dropzone
+ *= require font-awesome
  */
  body {
    background-color: #F0F0F0;
  }
  h1 {
-   font-family: 'Ubuntu', sans-serif;
+   font-family: 'Open Sans', sans-serif;
+ }
+ a {
+   color: #AAAAAA;
+   transition: color 0.1s ease;
+ }
+ a:hover {
+   color: #6194BC;
  }
 .banner {
   background-image: url('/assets/background.jpg');
@@ -56,12 +64,13 @@
   transform: translateY(-50%);
 }
 .title-text {
+  display: inline-block;
   margin-bottom: 0px;
   font-family: 'Bevan', cursive;
   text-align: left;
-  font-size: 50px;
+  font-size: 60px;
   color: white;
-  transition: color 0.5s ease;
+  transition: color 0.3s ease;
 }
 .title-text:hover {
   color: #c3ebf9;
@@ -76,7 +85,7 @@
   text-align: right;
   color: white;
   margin-bottom: 0px;
-  transition: color 0.5s ease;
+  transition: color 0.3s ease;
 }
 .top-button-right:hover {
   color: #c3ebf9;
@@ -122,6 +131,9 @@
   padding: 10px 20px;
   border-radius: 10px;
 }
+.sign-in {
+  margin-top: 60px;
+}
 .dropzone {
   width: 40%;
   margin: 15px auto;
@@ -148,6 +160,9 @@
 .profile:hover {
   box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
+.nav-button {
+  font-size: 13px;
+}
 .prof-pic {
   margin: 0px 0px 0px 0px;
   border-radius: 0px;
@@ -156,6 +171,10 @@
 .prof-data {
   height: inherit;
   padding: 20px 0 0 40px;
+}
+.edit-button {
+  margin: 0px 20px 20px 0px;
+  font-size: 13px;
 }
 .header-pic {
   width: inherit;
@@ -197,7 +216,7 @@ hr {
   height: 50px;
 }
 .nav-button {
-  width: 130px;
+  width: 120px;
   text-align: center;
 }
 .dive-profile {

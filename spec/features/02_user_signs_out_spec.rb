@@ -15,8 +15,8 @@ feature 'user signs out', %(
     fill_in 'user_password', with: user.password
     click_button 'Sign In'
     expect(page).to have_content('Signed in successfully.')
-    click_link 'Sign Out'
+    click_link('signout')
     expect(page).to have_content('Sign In')
-    expect(page).to_not have_content('Sign Out')
+    expect(page).to_not have_selector('#signout')
   end
 end

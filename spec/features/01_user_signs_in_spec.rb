@@ -16,7 +16,7 @@ feature 'user signs in', %(
     click_button 'Sign In'
     expect(page).to have_content('Signed in successfully.')
     expect(page).to_not have_button('Sign In')
-    expect(page).to have_content('Sign Out')
+    expect(page).to have_selector('#signout')
   end
 
   scenario 'user specifies invalid information' do
@@ -27,7 +27,7 @@ feature 'user signs in', %(
     click_button 'Sign In'
     expect(page).to have_content('Invalid Email or password.')
     expect(page).to have_button('Sign In')
-    expect(page).to_not have_content('Sign Out')
+    expect(page).to_not have_selector('#signout')
   end
 
   scenario 'user specifies invalid information' do
@@ -38,6 +38,6 @@ feature 'user signs in', %(
     click_button 'Sign In'
     expect(page).to have_content('Invalid Email or password.')
     expect(page).to have_button('Sign In')
-    expect(page).to_not have_content('Sign Out')
+    expect(page).to_not have_selector('#signout')
   end
 end

@@ -113,6 +113,8 @@ GEM
     fog-xml (0.1.2)
       fog-core
       nokogiri (~> 1.5, >= 1.5.11)
+    font-awesome-rails (4.7.0.0)
+      railties (>= 3.2, < 5.1)
     formatador (0.2.5)
     foundation-rails (6.2.3.0)
       railties (>= 3.1.0)
@@ -282,6 +284,7 @@ DEPENDENCIES
   dropzonejs-rails
   factory_girl
   fog-aws
+  font-awesome-rails
   foundation-rails
   jbuilder (~> 2.5)
   jquery-rails

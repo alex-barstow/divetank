@@ -20,6 +20,7 @@ gem 'foundation-rails'
 gem 'carrierwave', '>= 1.0.0.beta', '< 2.0'
 gem 'fog-aws'
 gem 'dropzonejs-rails'
+gem "font-awesome-rails"
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
