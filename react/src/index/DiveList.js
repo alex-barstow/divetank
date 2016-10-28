@@ -38,11 +38,20 @@ const DiveList = props => {
       />
     );
   });
-  return (
-    <div className='small-up-1 medium-up-2 large-up-3' data-equalizer data-equalize-by-row="true">
-      {dives}
-    </div>
-  );
+
+  if (props.dives.length > 0) {
+    return (
+      <div className='small-up-1 medium-up-2 large-up-3' data-equalizer data-equalize-by-row="true">
+        {dives}
+      </div>
+    );
+  } else {
+    return (
+      <div className='new-user-message subheader'>
+      <h2>Add your first dive by clicking 'Log a Dive'</h2>
+      </div>
+    );
+  }
 };
 
 export default DiveList;
