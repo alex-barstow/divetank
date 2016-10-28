@@ -22,54 +22,59 @@ const ChartComponent = props => {
       [new Date(dateString), depth]
     );
   });
-
-  return (
-    <div>
-      <div className='chart'>
-        <Chart
-          chartType="ColumnChart"
-          data={[
-          ["Depth Range", "Number of Dives", { role: "style" } ],
-          ["0-30", firstRange, "#88ACF6"],
-          ["31-60", secondRange, "#6E90E5"],
-          ["61-90", thirdRange, "#5475D4"],
-          ["90-130", fourthRange, "#3A59C3"],
-          ["130+", fifthRange, "#00009C"]
-        ]}
-          options={{title: 'Experience at Depth',
-            hAxis: {title: 'Depth(ft)'},
-            vAxis: {title: 'Number of Dives'},
-            legend: 'none'}}
-          graph_id="ColumnChart"
-          width="50%"
-          height="450px"
-         />
+  if (props.dives.length > 0) {
+    return (
+      <div className='charts'>
+      <div className='column large-6'>
+      <Chart
+      chartType="ColumnChart"
+      data={[
+        ["Depth Range", "Number of Dives", { role: "style" } ],
+        ["0-30", firstRange, "#88ACF6"],
+        ["31-60", secondRange, "#6E90E5"],
+        ["61-90", thirdRange, "#5475D4"],
+        ["90-130", fourthRange, "#3A59C3"],
+        ["130+", fifthRange, "#00009C"]
+      ]}
+      options={{title: 'Experience at Various Depths',
+      hAxis: {title: 'Depth (ft)'},
+      vAxis: {title: 'Number of Dives'},
+      legend: 'none'}}
+      graph_id="ColumnChart"
+      width="100%"
+      height="450px"
+      />
       </div>
-      <div className='chart'>
-        <Chart
-          chartType="ScatterChart"
-          rows={lineChartData}
-          columns={[
-            {
-              'type': 'date',
-              'label' : 'Date'
-            },
-            {
-              'type' : 'number',
-              'label' : 'Depth'
-            }
-          ]}
-          options={{title: 'Dives vs. Time',
-            hAxis: {title: 'Date'},
-            vAxis: {title: 'Depth'},
-            legend: 'none'}}
-          graph_id="ScatterChart"
-          width="50%"
-          height="450px"
-         />
+      <div className='column large-6'>
+      <Chart
+      chartType="ScatterChart"
+      rows={lineChartData}
+      columns={[
+        {
+          'type': 'date'
+        },
+        {
+          'type' : 'number'
+        }
+      ]}
+      options={{title: 'Dive Frequency and Depth',
+      hAxis: {title: 'Date'},
+      vAxis: {title: 'Depth (ft)'},
+      legend: 'none'}}
+      graph_id="ScatterChart"
+      width="100%"
+      height="450px"
+      />
       </div>
-    </div>
-  );
+      </div>
+    );
+  } else {
+    return (
+      <div className='new-user-message subheader'>
+        <h2>You dont have any data yet! Log a dive to start!</h2>
+      </div>
+    )
+  }
 };
 
 export default ChartComponent;

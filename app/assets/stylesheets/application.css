@@ -199,16 +199,6 @@ hr {
   width: 90%;
   margin-bottom: 30px;
 }
-.chart {
-  width: inherit;
-  margin: auto;
-  margin-bottom: 25px;
-  background-color: white;
-  transition: all 0.3s ease;
-}
-.chart:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
-}
 .info-group {
   padding: 0px 90px;
 }
@@ -279,15 +269,16 @@ hr {
 .media-submit:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
+.new-user-message {
+  text-align: center;
+}
 .react-appear {
   opacity: 0.01;
 }
-
 .react-appear.react-appear-active {
   opacity: 1;
   transition: opacity .5s ease-in;
 }
-
 .alert-box {
   margin: 0px 0px 0px 0px;
   padding: 1.3rem;
