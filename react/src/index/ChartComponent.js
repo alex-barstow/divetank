@@ -36,8 +36,8 @@ const ChartComponent = props => {
           ["90-130", fourthRange, "#3A59C3"],
           ["130+", fifthRange, "#00009C"]
         ]}
-          options={{title: 'Experience at Depth',
-            hAxis: {title: 'Depth(ft)'},
+          options={{title: 'Experience at Various Depths',
+            hAxis: {title: 'Depth (ft)'},
             vAxis: {title: 'Number of Dives'},
             legend: 'none'}}
           graph_id="ColumnChart"
@@ -56,12 +56,12 @@ const ChartComponent = props => {
             },
             {
               'type' : 'number',
-              'label' : 'Depth'
+              'label' : ''
             }
           ]}
-          options={{title: 'Dives vs. Time',
+          options={{title: 'Dive Frequency and Depth',
             hAxis: {title: 'Date'},
-            vAxis: {title: 'Depth'},
+            vAxis: {title: 'Depth (ft)'},
             legend: 'none'}}
           graph_id="ScatterChart"
           width="100%"
