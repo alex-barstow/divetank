@@ -14,6 +14,7 @@
  *= require_self
  *= require foundation_and_overrides
  *= require dropzone/dropzone
+ *= require font-awesome
  */
  body {
    background-color: #F0F0F0;
@@ -63,10 +64,11 @@
   transform: translateY(-50%);
 }
 .title-text {
+  display: inline-block;
   margin-bottom: 0px;
   font-family: 'Bevan', cursive;
   text-align: left;
-  font-size: 50px;
+  font-size: 60px;
   color: white;
   transition: color 0.3s ease;
 }
@@ -158,6 +160,9 @@
 .profile:hover {
   box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
+.nav-button {
+  font-size: 13px;
+}
 .prof-pic {
   margin: 0px 0px 0px 0px;
   border-radius: 0px;
@@ -169,9 +174,7 @@
 }
 .edit-button {
   margin: 0px 20px 20px 0px;
-}
-.nav-tab {
-  border-radius: 10px;
+  font-size: 13px;
 }
 .header-pic {
   width: inherit;
@@ -213,7 +216,7 @@ hr {
   height: 50px;
 }
 .nav-button {
-  width: 130px;
+  width: 120px;
   text-align: center;
 }
 .dive-profile {

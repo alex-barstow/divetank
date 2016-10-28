@@ -1,6 +1,8 @@
 import React from 'react';
 import {Chart} from 'react-google-charts';
 
+// add onmouseover event, get column and row indeces
+
 const ChartComponent = props => {
   let firstRange = props.columnChart.first;
   let secondRange = props.columnChart.second;
