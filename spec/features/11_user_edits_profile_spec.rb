@@ -16,7 +16,7 @@ feature 'user edits profile details', %(
     fill_in 'user_password', with: user.password
     click_button 'Sign In'
 
-    expect(page).to have_link('Edit Profile')
+    expect(page).to have_selector('#editprofile')
   end
 
   scenario 'user enteres valid information', js: true do
@@ -25,7 +25,7 @@ feature 'user edits profile details', %(
     fill_in 'Email', with: user.email
     fill_in 'user_password', with: user.password
     click_button 'Sign In'
-    click_link 'Edit Profile'
+    click_link('editprofile')
 
     fill_in 'Certification Agency', with: 'PADI'
     fill_in 'List your certifications', with: 'Advanced, Nitrox'
@@ -41,7 +41,7 @@ feature 'user edits profile details', %(
     fill_in 'Email', with: user.email
     fill_in 'user_password', with: user.password
     click_button 'Sign In'
-    click_link 'Edit Profile'
+    click_link('editprofile')
 
     fill_in 'Certification Agency', with: 'PADI'
     fill_in 'List your certifications', with: 'Advanced, Nitrox'
@@ -70,7 +70,7 @@ feature 'user edits profile details', %(
     fill_in 'Email', with: user.email
     fill_in 'user_password', with: user.password
     click_button 'Sign In'
-    click_link 'Edit Profile'
+    click_link('editprofile')
 
     fill_in 'Number of dives logged before DiveTank', with: 32
 

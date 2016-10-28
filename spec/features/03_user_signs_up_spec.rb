@@ -19,7 +19,7 @@ feature 'user signs up', %(
     fill_in 'Password confirmation', with: 'password'
     click_button 'Sign Up'
     expect(page).to have_content('Welcome to DiveTank! You have signed up successfully.')
-    expect(page).to have_content('Sign Out')
+    expect(page).to have_selector('#signout')
   end
 
   scenario 'user specifies invalid information' do
@@ -32,7 +32,7 @@ feature 'user signs up', %(
     expect(page).to have_content("First name can't be blank")
     expect(page).to have_content("Last name can't be blank")
     expect(page).to have_content('User name is too short')
-    expect(page).to_not have_content('Sign Out')
+    expect(page).to_not have_selector('#signout')
   end
 
   scenario 'user specifies incorrect password confirmation' do
@@ -46,7 +46,7 @@ feature 'user signs up', %(
     fill_in 'Password confirmation', with: 'password1'
     click_button 'Sign Up'
     expect(page).to have_content("Password confirmation doesn't match Password")
-    expect(page).to_not have_content('Sign Out')
+    expect(page).to_not have_selector('#signout')
   end
 
 end

@@ -46,7 +46,7 @@ const UserProfile = props => {
             <h2>{diveTotal}</h2>
           </div>
         </div>
-        <a href={`/users/${userId}/edit`} className="edit-button float-right"><i className="fa fa-pencil fa-2x" aria-hidden="true"></i></a>
+        <a href={`/users/${userId}/edit`} className="edit-button float-right" id="editprofile"><i className="fa fa-pencil fa-2x" aria-hidden="true"></i></a>
       </div>
     </div>
   );
