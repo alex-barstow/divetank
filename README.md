@@ -3,11 +3,14 @@
 ![Coverage Status](https://coveralls.io/repos/alex-barstow/divetank/badge.png)
 
 Visit DiveTank on Heroku
+Sign in using demo user account:
+Email: demo-user@divetank.com
+Password: divedivedive!
 
 Synopsis
 The logbook is an essential tool in every diver's toolkit. This project is an augmentation of the traditional dive logbook that lets users record important data about each of their dives, attach photos and video, use charts to visualize summary data about their total dive career, and access their logbook remotely.
 
-This was built in 2 weeks for my final project as an apprentice at the Boston-based full-stack bootcamp, Launch Academy. It's an ongoing project and I plan on continuing to make additions and improvements in the near future.
+This was built in 2 weeks for my final project as an apprentice at the Boston-based full-stack bootcamp, Launch Academy. It's an ongoing project and I plan on continuing to make improvements and additions in the near future.
 
 Features
 
