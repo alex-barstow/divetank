@@ -3,8 +3,10 @@
 ![Coverage Status](https://coveralls.io/repos/alex-barstow/divetank/badge.png)
 
 # DiveTank
-[Visit DiveTank on Heroku](https://divetank.herokuapp.com/)
-* Sign in using demo user account:
+[Visit DiveTank on Heroku](https://divetank.herokuapp.com/) <br/>
+[View Demo on YouTube](https://youtu.be/j5o5YDdZ9QE)
+
+Sign in using demo user account:
 * Email: demo-user@divetank.com
 * Password: divedivedive!
 
