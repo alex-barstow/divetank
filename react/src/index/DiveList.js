@@ -48,7 +48,7 @@ const DiveList = props => {
   } else {
     return (
       <div className='new-user-message subheader'>
-      <h2>Add your first dive by clicking 'Log a Dive'</h2>
+        <h2>Add your first dive by clicking 'Log a Dive'</h2>
       </div>
     );
   }

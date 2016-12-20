@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ProfileMenu = props => {
-  let classNameChart, classNameDives, clickHandler;
+  let classNameChart, classNameDives;
 
   if (props.data) {
     if (props.data === 'chart') {
