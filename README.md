@@ -29,10 +29,10 @@ This was built in 2 weeks for my final project as an apprentice at the Boston-ba
 
 ### Installation
 
-* In a terminal, run git clone https://github.com/alex-barstow/divetank.git.
-* Navigate to the project's root directory with cd divetank.
-* Run bundle install && npm install && rake db:setup.
-* In two separate terminals, run rails server and npm start from the project's root directory.
+* In a terminal, run `git clone https://github.com/alex-barstow/divetank.git`
+* Navigate to the project's root directory with `cd divetank`
+* Run `bundle install && npm install && rake db:setup`
+* In two separate terminals, run `rails server` and `npm start` from the project's root directory.
 * Visit http://localhost:3000 in your browser.
 
 ### Technologies Used
